@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="Imagens">
+    <file>ludo_icon.jpg</file>
+    <file>peca.png</file>
+    <file>Ludo_board.png</file>
+  </qresource>
+</RCC>
