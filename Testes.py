@@ -1,89 +1,133 @@
+# Autor: Sol Castilho Araújo de Moraes Sêda (1711600)
+# Horas Trabalhadas:
+"""	
+Horas Trabalhadas - Sol Castilho Araújo de Moraes Sêda (1711600)	
+01/10/2020 -> INICIO: 13:00 - TERMINO: 15:00	
+07/10/2020 -> INICIO: 22:30 - TERMINO: 22:00
+10/10/2020 -> INICIO: 17:00 - 
+         
+
+"""
 import unittest
-from unittest import mockexit
+from unittest import mock
 
 
 class Testmock (unittest.TestCase):
 
+    #------------Menu.py------------#
+    # Inserindo a quantidade de jogadores
+    def test_01_inserir_quantidade_dois_ok(self):
+        m = mock.Mock()
+        print("Caso de teste 1 - inserindo dois jogadores")
+        retorno_esperado = m.jogador_qnt(2)
+        self.assertEqual(retorno_esperado, 0)
 
-# Inserindo a quantidade de jogadores
-def test_01_inserir_quantidade_dois_ok(self):
-    print("Caso de teste 1 - inserindo dois jogadores")
-    retorno_esperado = m.jogador_qnt(2)
-    self.assetEqual(retorno_esperado, 0)
+    def test_02_inserir_quantidade_dois_erro(self):
+        m = mock.Mock()
+        print("Caso de teste 2 - erro ao inserir dois jogadores")
+        retorno_esperado = m.jogador_qnt(2)
+        self.assertEqual(retorno_esperado, 1)
 
+    def test_03_inserir_quantidade_tres_ok(self):
+        m = mock.Mock()
+        print("Caso de teste 3 - inserindo tres jogadores")
+        retorno_esperado = m.jogador_qnt(3)
+        self.assertEqual(retorno_esperado, 0)
 
-def test_02_inserir_quantidade_dois_erro(self):
-    print("Caso de teste 2 - erro ao inserir dois jogadores")
-    retorno_esperado = m.jogador_qnt(2)
-    self.assetEqual(retorno_esperado, 1)
+    def test_04_inserir_quantidade_dois_erro(self):
+        m = mock.Mock()
+        print("Caso de teste 4 - erro ao inserir tres jogadores")
+        retorno_esperado = m.jogador_qnt(3)
+        self.assertEqual(retorno_esperado, 1)
 
+    def test_05_inserir_quantidade_quatro_ok(self):
+        m = mock.Mock()
+        print("Caso de teste 5 - inserindo quatro jogadores")
+        retorno_esperado = m.jogador_qnt(4)
+        self.assertEqual(retorno_esperado, 0)
 
-def test_03_inserir_quantidade_tres_ok(self):
-    print("Caso de teste 3 - inserindo tres jogadores")
-    retorno_esperado = m.jogador_qnt(3)
-    self.assetEqual(retorno_esperado, 0)
-
-
-def test_04_inserir_quantidade_dois_erro(self):
-    print("Caso de teste 4 - erro ao inserir tres jogadores")
-    retorno_esperado = m.jogador_qnt(3)
-    self.assetEqual(retorno_esperado, 1)
-
-
-def test_05_inserir_quantidade_quatro_ok(self):
-    print("Caso de teste 5 - inserindo quatro jogadores")
-    retorno_esperado = m.jogador_qnt(4)
-    self.assetEqual(retorno_esperado, 0)
-
-
-def test_06_inserir_quantidade_quatro_erro(self):
-    print("Caso de teste 6 - erro ao inserir quatro jogadores")
-    retorno_esperado = m.jogador_qnt(4)
-    self.assetEqual(retorno_esperado, 1)
-
-
-# inserindo um jogador
-def test_07_inserir_jogador_ok_condicao_retorno(self):
-    m = mock.Mock()
-    print("Caso de teste 7 - Inserir com sucesso")
-    retorno_esperado = m.jogador_insere("Mario", "azul")
-    self.assertEqual(retorno_esperado, 0)
+    def test_06_inserir_quantidade_quatro_erro(self):
+        m = mock.Mock()
+        print("Caso de teste 6 - erro ao inserir quatro jogadores")
+        retorno_esperado = m.jogador_qnt(4)
+        self.assertEqual(retorno_esperado, 1)
 
 
-def test_08_verifica_jogador_inserido_com_sucesso(self):
-    m = mock.Mock()
-    print("Caso de teste 8 - verifica insercão")
-    self.assertIn({'nome': 'Mario', 'cor': 'azul'}, m.lista_jogadores())
+    # inserindo um jogador
+    def test_07_inserir_jogador_ok_condicao_retorno(self):
+        m = mock.Mock()
+        print("Caso de teste 7 - Inserir com sucesso")
+        retorno_esperado = m.jogador_insere("Mario", "azul")
+        self.assertEqual(retorno_esperado, 0)
+
+    def test_08_verifica_jogador_inserido_com_sucesso(self):
+        m = mock.Mock()
+        print("Caso de teste 8 - verifica insercão")
+        self.assertIn({'nome': 'Mario', 'cor': 'azul'}, m.lista_jogadores())
+
+    def test_09_inserir_jogador_ja_existente(self):
+        m = mock.Mock()
+        print("Caso de teste 9 - inserir jogador ja existente")
+        retorno_esperado = m.jogador_insere("Mario", "Azul")
+        self.assertEqual(retorno_esperado, 1)
 
 
-def test_09_inserir_jogador_ja_existente(self):
-    m = mock.Mock()
-    print("Caso de teste 9 - inserir jogador ja existente")
-    retorno_esperado = m.jogador_insere("Mario", "Azul")
-    self.assertEqual(retorno_esperado, 1)
+    # Abrir a tela de regras
+    def test_10_abrir_regras_ok(self):
+        m = mock.Mock()
+        print("Caso de teste 10 - Abrir a tela de regras")
+        retorno_esperado = m.abre_regras()
+        self.assertEqual(retorno_esperado, 0)
 
-# abrir a tela de regras
-def test_10_abrir_regras_ok(self):
-    m = mock.Mock()
-    print("Caso de teste 10 - Abrir a tela de regras")
-    retorno_esperado = m.abre_regras()
-    self.assertEqual(retorno_esperado, 0)
+    def test_11_abrir_regras_falha(self):
+        m = mock.Mock()
+        print("Caso de teste 11 - Abrir tela de Regras falhou")
+        retorno_esperado = m.abre_regras()
+        self.assertEqual(retorno_esperado, 1)
 
 
-def test_11_abrir_regras_falha(self):
-    m = mock.Mock()
-    Print("Caso de teste 11 - Abrir tela de Regras FALHA")
-    retorno_esperado = m.abre_regras()
-    self.assertEqual(retorno_esperado, 1)
+    # Abrir o histórico
+    def test_12_abrir_historico_ok(self):
+        m = mock.Mock()
+        print("Caso de teste 12 - Abrir a tela de histórico")
+        retorno_esperado = m.abre_historico()
+        self.assertEqual(retorno_esperado, 0)
 
-test_01_inserir_quantidade_dois_ok()
-test_02_inserir_quantidade_dois_erro()
-test_03_inserir_quantidade_tres_ok()
-test_04_inserir_quantidade_dois_erro()
-test_05_inserir_quantidade_quatro_ok()
-test_06_inserir_quantidade_quatro_erro()
-test_07_inserir_jogador_ok_condicao_retorno()
-test_08_verifica_jogador_inserido_com_sucesso()
-test_09_inserir_jogador_ja_existente()
-test_10_abrir_regras_ok()
-test_11_abrir_regras_falha()
+    def test_13_abrir_historico_falha(self):
+        m = mock.Mock()
+        print("Caso de teste 13 - Abrir a tela de histórico falhou")
+        retorno_esperado = m.abre_historico()
+        self.assertEqual(retorno_esperado, 1)
+
+
+    # iniciar a partida
+    def test_14_iniciar_partida_ok(self):
+        m = mock.Mock()
+        print("Caso de teste 14 - Iniciar a partida")
+        retorno_esperado = m.iniciar_partida()
+        self.assertEqual(retorno_esperado, 0)
+
+    def test_14_iniciar_partida_falha(self):
+        m = mock.Mock()
+        print("Caso de teste 14 - Iniciar a partida falhou")
+        retorno_esperado = m.iniciar_partida()
+        self.assertEqual(retorno_esperado, 1)
+
+
+    # teste de uma jogada
+    def test_15_realizar_jogada_ok(self):
+        m = mock.Mock()
+        print("Caso de teste 15 - realizar uma jogada")
+        retorno_esperado = m.movimenta(m.posicao(), m.novas_posicoes())
+        self.assertEqual(retorno_esperado, 0)
+
+    def test_16_realizar_jogada_falha(self):
+        m = mock.Mock()
+        print("Caso de teste 16 - realizar uma jogada falhou")
+        retorno_esperado = m.movimenta(m.posicao(), m.novas_posicoes())
+        self.assertEqual(retorno_esperado, 1)
+
+
+#------------partida.py------------#
+#
+unittest.main()
