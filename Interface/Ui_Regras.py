@@ -161,4 +161,4 @@ class Ui_Regras(object):
         self.TokenLabel.setText(_translate("Regras", "Peças e Dado:"))
         self.BoardLabel.setText(_translate("Regras", "Tabuleiro:"))
         self.pushButtonConfirm.setText(_translate("Regras", "OK"))
-import resources_rc
+import Interface.Resources.resources_rc
