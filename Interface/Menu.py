@@ -9,16 +9,14 @@ from Interface.Regras import Regras
 
 class Menu(QMainWindow,Ui_Menu):
 
-    IniciaPartida = pyqtSignal(bool)
+    StartMatchSignal = pyqtSignal(list,list)
 
     def __init__(self):
         super(Menu, self).__init__()
         
         self.setupUi(self)
-        self.regras = Regras()
         #self.historico = Historico()
 
-        self.pushButtonRules.clicked.connect(self.regras.show)
         self.pushButtonExit.clicked.connect(self.close)
         self.PlayOptions = False
         self.pushButtonPlay.clicked.connect(self.switchOptions)
@@ -38,14 +36,10 @@ class Menu(QMainWindow,Ui_Menu):
         self.colorP3.clicked.connect(self.changeColorP3)
         self.colorP4.clicked.connect(self.changeColorP4)
 
-        self.pushButtonStart.clicked.connect(self.close)
+        self.playerNames = []
+        self.playerColors = []
 
-        #self.pushButtonPlay.clicked.connect(self.)
-        #self.nomesJogadores = []
-        #self.coresJogadores = []
-
-        #self.pushButtonStart.clicked.connect(self.inicia_partida)
-
+        self.pushButtonStart.clicked.connect(self.startMatch)
 
 
     def switchOptions(self):
@@ -131,72 +125,28 @@ class Menu(QMainWindow,Ui_Menu):
             self.colorP4.setStyleSheet("background-color: rgb(255, 0, 0);")
             self.p4Color = "Red"
 
-
-    #def inicia_partida(self):
-
-"""
-    def valida_partida(self):
-
-        if len(self.nomesJogadores) == 2 and (numJogadores[0] == "" or numJogadores[1] == ""):
-            self.error_dialog.showMessage('É necessário preencher o nome dos 2 jogadores\n para começar a partida.')
-            self.validada = False
-            return
-
-        elif len(self.nomesJogadores) == 3 and (numJogadores[0] == "" or numJogadores[1] == "" or numJogadores[2] == ""):
-            self.error_dialog.showMessage('É necessário preencher o nome dos 3 jogadores\n para começar a partida.')
-            self.validada = False
-            return
-
-        elif len(self.nomesJogadores) == 4 and (numJogadores[0] == "" or numJogadores[1] == "" or numJogadores[2] == "" or numJogadores[3] == ""):
-            self.error_dialog.showMessage('É necessário preencher o nome dos 4 jogadores\n para começar a partida.')
-            self.validada = False
-            return
-
-        if len(self.coresJogadores) == 2 and (numJogadores[0] == "" or numJogadores[1] == ""):
-
-        
-
-
-
-
-    def jogador_qnt(self, num):
-        self.numJogadores = self.spinBoxPlayersNum.getValue()
-        
-
-
-    def jogador_insere(self, nome, cor):
-
-        self.nomesJogadores.append(str(self.lineEditP1.text()))
-        self.coresJogadores.append(self.selecionaCor())
-
-        self.nomesJogadores.append(str(self.lineEditP1.text()))
-        self.coresJogadores.append(self.selecionaCor())
-
-        if self.numJogadores == 3:
-            self.nomesJogadores.append(str(self.lineEditP1.text()))
-            self.coresJogadores.append(self.selecionaCor())
-
-        elif self.numJogadores == 4:
-            self.nomesJogadores.append(str(self.lineEditP1.text()))
-            self.coresJogadores.append(self.selecionaCor())
-
-
-
-    def jogador_remove(self):
-
-
-
-
-            
-        
     
-    def abre_regras(self):
-        self.regras.show()
+    @pyqtSlot()
+    def invalidMatch(self):
+        self.warningLayout.show()
 
 
-    def abre_historico(self):
-        self.historico.show()
+    def startMatch(self):
+        self.playerColors.append(self.p1Color)
+        self.playerColors.append(self.p2Color)
+        self.playerNames.append(self.lineEditP1.text())
+        self.playerNames.append(self.lineEditP2.text())
+        if self.numPlayers == 3:
+            self.playerColors.append(self.p3Color)
+            self.playerNames.append(self.lineEditP3.text())
+        elif self.numPlayers == 4:
+            self.playerColors.append(self.p3Color)
+            self.playerColors.append(self.p4Color)
+            self.playerNames.append(self.lineEditP3.text())
+            self.playerNames.append(self.lineEditP4.text())
 
-    
-"""
+        self.StartMatchSignal.emit(self.playerNames,self.playerColors)
+        self.close()
+
+
 
