@@ -63,6 +63,8 @@ class Testmock (unittest.TestCase):
 
     def test_08_verifica_jogador_inserido_com_sucesso(self):            #DANDO ERRO
         m = mock.Mock()
+        m.lista_jogadores.nome = 'Mario'
+        m.lista_jogadores.cor = 'azul'
         print("Caso de teste 8 - verifica insercão")
         self.assertIn({'nome': 'Mario', 'cor': 'azul'}, m.lista_jogadores())
 
@@ -88,31 +90,31 @@ class Testmock (unittest.TestCase):
 
 
     # Abrir o histórico
-    """def test_12_abrir_historico_ok(self):
+    def test_12_abrir_historico_ok(self):
         m = mock.Mock()
         print("Caso de teste 12 - Abrir a tela de histórico")
-        retorno_esperado = m.abre_historico()
-        self.assertEqual(retorno_esperado, 0)
+        m.abre_historico.return_value = 0
+        self.assertEqual(m.abre_historico(), 0)
 
     def test_13_abrir_historico_falha(self):
         m = mock.Mock()
         print("Caso de teste 13 - Abrir a tela de histórico falhou")
-        retorno_esperado = m.abre_historico()
-        self.assertEqual(retorno_esperado, 1)
+        m.abre_historico.return_value = 1
+        self.assertEqual(m.abre_historico(), 1)
 
 
     # iniciar a partida
     def test_14_iniciar_partida_ok(self):
         m = mock.Mock()
         print("Caso de teste 14 - Iniciar a partida")
-        retorno_esperado = m.iniciar_partida()
-        self.assertEqual(retorno_esperado, 0)
+        m.iniciar_partida.return_value = 0
+        self.assertEqual(m.iniciar_partida(), 0)
 
     def test_15_iniciar_partida_falha(self):
         m = mock.Mock()
         print("Caso de teste 15 - Iniciar a partida falhou")
-        retorno_esperado = m.iniciar_partida()
-        self.assertEqual(retorno_esperado, 1)
+        m.iniciar_partida.return_value = 1
+        self.assertEqual(m.iniciar_partida(), 1)
 
 
     # teste de uma jogada
@@ -133,13 +135,21 @@ class Testmock (unittest.TestCase):
     def test_18_exibir_vencedor_ok(self):
         m = mock.Mock()
         print("Caso de teste 18 - exibir o vencedor de uma partida")
-        retorno_esperado = m.exibe_vencedor()
-        self.assertEqual(retorno_esperado, 0)
+        m.exibe_vencedor.return_value = 0
+        self.assertEqual(m.exibe_vencedor(), 0)
 
     def test_19_exibir_vencedor_falha(self):
         m = mock.Mock()
         print("Caso de teste 19 - exibir o vencedor de uma partida")
-        retorno_esperado = m.exibe_vencedor()
-        self.assertEqual(retorno_esperado, 1)"""
+        m.exibe_vencedor.return_value = 1
+        self.assertEqual(m.exibe_vencedor(), 1)
+
+    def test_20_abre_menu_ok(self):
+        m = mock.Mock()
+        print("Caso de teste 20 - abrir o menu após o final de uma partida")
+        m.abre_menu.return_value = 0
+        self.assertEqual(m.abre_menu(), 0)
+
+    
     
 unittest.main()
