@@ -11,8 +11,6 @@ import sys
 
 app = QApplication(sys.argv)
 
-__all__ = ["valida_partida"]
-
 """
 Gera classe somente para lidar com os sinais enviados entre as interfaces.
 É necessário herdar as propriedades do QObject para trabalhar com os eventos
@@ -29,6 +27,7 @@ class Interface(QObject):
         self.menu.pushButtonRules.clicked.connect(abre_regras)
         #self.menu.pushButtonHistory.clicked.connect(abre_historico)
         self.PartidaInvalida.connect(self.menu.invalidMatch)
+        #self.IniciaPartida.connect(teste)
 
 
 #Recebe os nomes e cores dos jogadores providos pela inteface do Menu e checa se são todos diferentes para validar ou não a partida
@@ -50,9 +49,8 @@ def valida_partida(nomesJogadores,coresJogadores):
             interface.IniciaPartida.emit(nomesJogadores,coresJogadores)
             interface.menu.close()
             return 0
-    else:
-        interface.PartidaInvalida.emit()
-        return 1
+    interface.PartidaInvalida.emit()
+    return 1
 
 
 #Abre a interface com as regras do jogo
@@ -74,6 +72,12 @@ def abre_historico():
         return 0
     except:
         return 1
+"""
+
+"""
+def teste(nomesJogadores,coresJogadores):
+    print(nomesJogadores)
+    print(coresJogadores)
 """
 
 interface = Interface()

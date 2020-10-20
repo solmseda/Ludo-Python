@@ -27,10 +27,10 @@ class Menu(QMainWindow,Ui_Menu):
         self.spinBoxNumPlayers.valueChanged.connect(self.setNumPlayers)
         self.setNumPlayers()
 
-        self.p1Color = "Red"
-        self.p2Color = "Yellow"
-        self.p3Color = "Green"
-        self.p4Color = "Blue"
+        self.p1Color = "Vermelho"
+        self.p2Color = "Amarelo"
+        self.p3Color = "Verde"
+        self.p4Color = "Azul"
         self.colorP1.clicked.connect(self.changeColorP1)
         self.colorP2.clicked.connect(self.changeColorP2)
         self.colorP3.clicked.connect(self.changeColorP3)
@@ -67,63 +67,63 @@ class Menu(QMainWindow,Ui_Menu):
 
 
     def changeColorP1(self):
-        if self.p1Color == "Red":
+        if self.p1Color == "Vermelho":
             self.colorP1.setStyleSheet("background-color: rgb(255, 255, 0);")
-            self.p1Color = "Yellow"
-        elif self.p1Color == "Yellow":
+            self.p1Color = "Amarelo"
+        elif self.p1Color == "Amarelo":
             self.colorP1.setStyleSheet("background-color: rgb(0, 170, 0);")
-            self.p1Color = "Green"
-        elif self.p1Color == "Green":
+            self.p1Color = "Verde"
+        elif self.p1Color == "Verde":
             self.colorP1.setStyleSheet("background-color: rgb(0, 85, 255);")
-            self.p1Color = "Blue"
+            self.p1Color = "Azul"
         else:
             self.colorP1.setStyleSheet("background-color: rgb(255, 0, 0);")
-            self.p1Color = "Red"
+            self.p1Color = "Vermelho"
 
 
     def changeColorP2(self):
-        if self.p2Color == "Red":
+        if self.p2Color == "Vermelho":
             self.colorP2.setStyleSheet("background-color: rgb(255, 255, 0);")
-            self.p2Color = "Yellow"
-        elif self.p2Color == "Yellow":
+            self.p2Color = "Amarelo"
+        elif self.p2Color == "Amarelo":
             self.colorP2.setStyleSheet("background-color: rgb(0, 170, 0);")
-            self.p2Color = "Green"
-        elif self.p2Color == "Green":
+            self.p2Color = "Verde"
+        elif self.p2Color == "Verde":
             self.colorP2.setStyleSheet("background-color: rgb(0, 85, 255);")
-            self.p2Color = "Blue"
+            self.p2Color = "Azul"
         else:
             self.colorP2.setStyleSheet("background-color: rgb(255, 0, 0);")
-            self.p2Color = "Red"
+            self.p2Color = "Vermelho"
 
 
     def changeColorP3(self):
-        if self.p3Color == "Red":
+        if self.p3Color == "Vermelho":
             self.colorP3.setStyleSheet("background-color: rgb(255, 255, 0);")
-            self.p3Color = "Yellow"
-        elif self.p3Color == "Yellow":
+            self.p3Color = "Amarelo"
+        elif self.p3Color == "Amarelo":
             self.colorP3.setStyleSheet("background-color: rgb(0, 170, 0);")
-            self.p3Color = "Green"
-        elif self.p3Color == "Green":
+            self.p3Color = "Verde"
+        elif self.p3Color == "Verde":
             self.colorP3.setStyleSheet("background-color: rgb(0, 85, 255);")
-            self.p3Color = "Blue"
+            self.p3Color = "Azul"
         else:
             self.colorP3.setStyleSheet("background-color: rgb(255, 0, 0);")
-            self.p3Color = "Red"
+            self.p3Color = "Vermelho"
 
 
     def changeColorP4(self):
-        if self.p4Color == "Red":
+        if self.p4Color == "Vermelho":
             self.colorP4.setStyleSheet("background-color: rgb(255, 255, 0);")
-            self.p4Color = "Yellow"
-        elif self.p4Color == "Yellow":
+            self.p4Color = "Amarelo"
+        elif self.p4Color == "Amarelo":
             self.colorP4.setStyleSheet("background-color: rgb(0, 170, 0);")
-            self.p4Color = "Green"
-        elif self.p4Color == "Green":
+            self.p4Color = "Verde"
+        elif self.p4Color == "Verde":
             self.colorP4.setStyleSheet("background-color: rgb(0, 85, 255);")
-            self.p4Color = "Blue"
+            self.p4Color = "Azul"
         else:
             self.colorP4.setStyleSheet("background-color: rgb(255, 0, 0);")
-            self.p4Color = "Red"
+            self.p4Color = "Vermelho"
 
     
     @pyqtSlot()
@@ -146,6 +146,8 @@ class Menu(QMainWindow,Ui_Menu):
             self.playerNames.append(self.lineEditP4.text())
 
         self.StartMatchSignal.emit(self.playerNames,self.playerColors)
+        self.playerNames.clear()
+        self.playerColors.clear()
 
 
 
