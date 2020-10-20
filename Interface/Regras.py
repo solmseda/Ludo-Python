@@ -1,5 +1,5 @@
 # Autor: Victor Nielsen Ribeirete (1811545)
-# Horas Trabalhadas: 5 Horas
+# Horas Trabalhadas: 20 minutos
 
 from Interface.Ui_Regras import Ui_Regras
 from PyQt5 import QtCore, QtGui, QtWidgets

@@ -7,7 +7,7 @@ Horas Trabalhadas - Eduardo Sardenberg e Victor Nielsen (1711600 e 1811545)
 
 from PyQt5.QtCore import pyqtSlot
 
-__all__ = ["criaJogador","posicaoJogador", "nomeJogador", "corJogador"]
+__all__ = ["criaJogador","posicaoJogadorPecas", "nomeJogador", "corJogador"]
 
 Jogador_1 = []
 Jogador_2 = []
@@ -74,7 +74,7 @@ def corJogador(Jogador):
     return Jogador[1]
 
 
-def posicaoJogador(Jogador, peca = None):
+def posicaoJogadorPecas(Jogador, peca = None):
     if peca == None:
         return Jogador[2]
     elif peca == 0:
