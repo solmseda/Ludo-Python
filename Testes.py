@@ -8,6 +8,7 @@ Horas Trabalhadas - Sol Castilho Araújo de Moraes Sêda (1711600)
          
 
 """
+from main import *
 import unittest
 from unittest import mock
 

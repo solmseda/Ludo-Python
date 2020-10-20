@@ -146,7 +146,6 @@ class Menu(QMainWindow,Ui_Menu):
             self.playerNames.append(self.lineEditP4.text())
 
         self.StartMatchSignal.emit(self.playerNames,self.playerColors)
-        self.close()
 
 
 
