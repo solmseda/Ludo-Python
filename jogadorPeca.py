@@ -1,13 +1,6 @@
-from PyQt5.QtCore import pyqtSignal, pyqtSlot
-from main import Main
+from PyQt5.QtCore import pyqtSlot
 
 __all__ = ["criaJogador","posicaoJogador"]
-
-class SinaisJogador(Main):
-    SinalPosicao = pyqtSignal()
-    def __init__(self):
-        super(SinaisJogador, self).__init__()
-
 
 Jogador_1 = []
 Jogador_2 = []
@@ -19,44 +12,28 @@ Jogador_4 = []
 def criaJogador(nomesJogadores,coresJogadores):
     numJogadores = len(nomesJogadores)
     
-    if numJogadores == 2:
-        Jogador_1.append(nomesJogadores[0])
-        Jogador_1.append(coresJogadores[0])
-        escolheBase(Jogador_1)
-        __all__.append(Jogador_1)
+    Jogador_1.append(nomesJogadores[0])
+    Jogador_1.append(coresJogadores[0])
+    escolheBase(Jogador_1)
+    __all__.append(Jogador_1)
 
-        Jogador_2.append(nomesJogadores[1])
-        Jogador_2.append(coresJogadores[1])
-        escolheBase(Jogador_2)
-        __all__.append(Jogador_2)
+    Jogador_2.append(nomesJogadores[1])
+    Jogador_2.append(coresJogadores[1])
+    escolheBase(Jogador_2)
+    __all__.append(Jogador_2)
 
-    elif numJogadores == 3:
-        Jogador_1.append(nomesJogadores[0])
-        Jogador_1.append(coresJogadores[0])
-        escolheBase(Jogador_1)
-        __all__.append(Jogador_1)
+    print(Jogador_1)
+    print(Jogador_2)
 
-        Jogador_2.append(nomesJogadores[1])
-        Jogador_2.append(coresJogadores[1])
-        escolheBase(Jogador_2)
-        __all__.append(Jogador_2)
-
+    if numJogadores == 3:
         Jogador_3.append(nomesJogadores[2])
         Jogador_3.append(coresJogadores[2])
         escolheBase(Jogador_3)
         __all__.append(Jogador_3)
 
+        print(Jogador_3)
+
     elif numJogadores == 4:
-        Jogador_1.append(nomesJogadores[0])
-        Jogador_1.append(coresJogadores[0])
-        escolheBase(Jogador_1)
-        __all__.append(Jogador_1)
-
-        Jogador_2.append(nomesJogadores[1])
-        Jogador_2.append(coresJogadores[1])
-        escolheBase(Jogador_2)
-        __all__.append(Jogador_2)
-
         Jogador_3.append(nomesJogadores[2])
         Jogador_3.append(coresJogadores[2])
         escolheBase(Jogador_3)
@@ -67,12 +44,8 @@ def criaJogador(nomesJogadores,coresJogadores):
         escolheBase(Jogador_4)
         __all__.append(Jogador_4)
 
-    #Começa partida
-    print(Jogador_1)
-    print(Jogador_2)
-    print(Jogador_3)
-    print(Jogador_4)
-    #abreTabuleiro()
+        print(Jogador_3)
+        print(Jogador_4)
 
 
 def escolheBase(Jogador):
@@ -105,6 +78,3 @@ def posicaoJogador(Jogador, peca = None):
         return Jogador[2][2]
     elif peca == 3:
         return Jogador[2][3]
-
-
-#def abreTabuleiro()

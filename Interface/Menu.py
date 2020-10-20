@@ -15,7 +15,6 @@ class Menu(QMainWindow,Ui_Menu):
         super(Menu, self).__init__()
         
         self.setupUi(self)
-        #self.historico = Historico()
 
         self.pushButtonExit.clicked.connect(self.close)
         self.PlayOptions = False
