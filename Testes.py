@@ -4,14 +4,14 @@
 Horas Trabalhadas - Sol Castilho Araújo de Moraes Sêda (1711600)	
 01/10/2020 -> INICIO: 13:00 - TERMINO: 15:00	
 07/10/2020 -> INICIO: 22:30 - TERMINO: 22:00
-10/10/2020 -> INICIO: 17:00 - 
+10/10/2020 -> INICIO: 17:00 - TERMINO: 18:00
+19/10/2020 -> INICIO: 20:00 - TERMINO: 
          
 
 """
-from main import *
 import unittest
 from unittest import mock
-
+#import main
 
 class Testmock (unittest.TestCase):
 
@@ -19,39 +19,57 @@ class Testmock (unittest.TestCase):
     # Inserindo a quantidade de jogadores
     def test_01_inserir_quantidade_dois_ok(self):
         m = mock.Mock()
+        jogadores = ["Mario", "Jorge"]
+        cores = ["Vermelho", "Amarelo"]
         print("Caso de teste 1 - inserindo dois jogadores ")
-        m.jogador_qnt.return_value = 0
-        self.assertEqual(m.jogador_qnt(2), 0)
+        m.valida_partida.return_value = 0
+        self.assertEqual(m.valida_partida(jogadores, cores), 0)
+        #self.assertEqual(main.valida_partida(jogadores, cores), 0)
 
     def test_02_inserir_quantidade_dois_erro(self):
         m = mock.Mock()
-        print("Caso de teste 2 - erro ao inserir dois jogadores ")
-        m.jogador_qnt.return_value = 1
-        self.assertEqual(m.jogador_qnt(2), 1)
+        jogadores = ["Mario", "Jorge"]
+        cores = ["Vermelho", "Vermelho"]
+        print("Caso de teste 2 - erro dois jogadores inseridos na mesma cor")
+        m.valida_partida.return_value = 1
+        self.assertEqual(m.valida_partida(jogadores, cores), 1)
+        #self.assertEqual(main.valida_partida(jogadores, cores), 1)
 
     def test_03_inserir_quantidade_tres_ok(self):
         m = mock.Mock()
-        print("Caso de teste 3 - inserindo tres jogadores")
-        m.jogador_qnt.return_value = 0
-        self.assertEqual(m.jogador_qnt(3), 0)
+        jogadores = ["Mario", "Jorge", "Isabela"]
+        cores = ["Vermelho", "Amarelo", "Verde"]
+        print("Caso de teste 3 - inserindo três jogadores")
+        m.valida_partida.return_value = 0
+        self.assertEqual(m.valida_partida(jogadores, cores), 0)
+        #self.assertEqual(main.valida_partida(jogadores, cores), 0)
 
     def test_04_inserir_quantidade_tres_erro(self):
         m = mock.Mock()
-        print("Caso de teste 4 - erro ao inserir três jogadores")
-        m.jogador_qnt.return_value = 1
-        self.assertEqual(m.jogador_qnt(3), 1)
+        jogadores = ["Mario", "Jorge", "Isabela"]
+        cores = ["Vermelho", "Vermelho", "Verde"]
+        print("Caso de teste 4 - erro ao inserir três jogaores, dois jogadores com a mesma cor")
+        m.valida_partida.return_value = 1
+        self.assertEqual(m.valida_partida(jogadores, cores), 1)
+        #self.assertEqual(main.valida_partida(jogadores, cores), 1)
 
     def test_05_inserir_quantidade_quatro_ok(self):
         m = mock.Mock()
+        jogadores = ["Mario", "Jorge", "Isabela", "Maria"]
+        cores = ["Vermelho", "Vermelho", "Verde", "Azul"]
         print("Caso de teste 5 - inserindo quatro jogadores")
-        m.jogador_qnt.return_value = 0
-        self.assertEqual(m.jogador_qnt(4), 0)
+        m.valida_partida.return_value = 0
+        self.assertEqual(m.valida_partida(jogadores, cores), 0)
+        #self.assertEqual(main.valida_partida(jogadores, cores), 0)
 
     def test_06_inserir_quantidade_quatro_erro(self):
         m = mock.Mock()
-        print("Caso de teste 6 - erro ao inserir quatro jogadores")
-        m.jogador_qnt.return_value = 1
-        self.assertEqual(m.jogador_qnt(4), 1)
+        jogadores = ["Mario", "Jorge", "Isabela", "Maria"]
+        cores = ["Vermelho", "Vermelho", "Verde", "Azul"]
+        print("Caso de teste 6 - erro ao inserir quatro jogadores, dois jogadores com a mesma cor")
+        m.valida_partida.return_value = 1
+        self.assertEqual(m.valida_partida(jogadores, cores), 1)
+        #self.assertEqual(main.valida_partida(jogadores, cores), 1)
 
 
     # inserindo um jogador
