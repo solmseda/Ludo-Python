@@ -2,15 +2,18 @@ Para rodar os testes deve-se abrir e arquivo Testes.py e rodar de acordo com a i
 Exemplo para a produção dos testes foi utilizado o VSCode, nesta ide deve-se pressionar Ctrl + F5 para rodar o programa.
 OBS: Os testes estão rodando através de Mockup pois um bug impediu de testas as funções do modulo main.py, quando se tentava testar ele abria a interface gráfica e não realizava os testes
 
-Para testar a interface gráfica, rode o módulo main.py, uma janela irá se abrir:
-1 - Ao clicar em jogar
+Para testar a interface gráfica, é necessário possuir instalado com pip o pyqt5, junto da extensão PYQT Integration.
+Rode o módulo main.py, uma janela irá se abrir:
+1 - Ao clicar em Jogar
 	1.1 - na tela que surgir digite a quantidade de jogadores desejada (minimo 2 e máximo 4)
 	1.2 - digite o nome do primeiro jogador e clique no botao ao lado para escolher a cor (cada clique mostra uma das 4 cores disponiveis)
 	1.3 - repita o passo (1.2) para os jogadores seguintes
-	1.4 - caso clique em jogar (nestes momento irá fechar o programa pois o jogo ainda não foi implementado)
-	1.5 - caso clique em voltar ao menu irá retornar a tela anterior
-2 - Ao clicar em regras
-	1.1 - uma tela mostrando as regras do jogo irá aparecer
-	1.2 - para fechar essa tela clique no X no canto superior da mesma
-3 - Histórico ainda não implementado
-4 - Ao clicar em sair o programa encerrara.
+	1.4 - caso clique em Iniciar Partida:
+		1.4.1 - Se não houver nomes e cores repitidos, serão enviados ao modulo jogadorPeca vetores contendo os nomes e cores de todos os jogadores confirmados. Em seguida os jogadores serão gerados, assim como um sinal para iniciar a partida. O programa fechará por ainda não haver o módulo partida
+		1.4.2 - Se houver nomes ou cores repitidos, aparecerá um aviso na tela indicando ser necessário alterá-los e os jogadores e partida não serão iniciados neste momento
+	1.5 - caso clique em Voltar ao Menu, o menu irá retornar a tela anterior
+2 - Ao clicar em Regras
+	1.1 - aparecerá uma tela mostrando as regras do jogo irá
+	1.2 - para fechar essa tela clique no botão Ok situado no meio inferior
+3 - Ao clicar em Histórico nada acontece pelo o mesmo ainda não ter sido implementado
+4 - Ao clicar em Sair o programa encerrara.

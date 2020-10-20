@@ -1,10 +1,11 @@
+# Autor: Victor Nielsen Ribeirete (1811545)
+# Horas Trabalhadas: 10 Horas
+
+
 from Interface.Ui_Menu import Ui_Menu
 
 from PyQt5.QtWidgets import QMainWindow, QWidget
 from PyQt5.QtCore import pyqtSignal, pyqtSlot
-
-from Interface.Regras import Regras
-#from Interface.Historico import Historico
 
 
 class Menu(QMainWindow,Ui_Menu):

@@ -1,6 +1,13 @@
+# Autores: Eduardo Sardenberg e Victor Nielsen (1711600 e 1811545)
+# Horas Trabalhadas ao todo: 8 horas e meia
+"""	
+Horas Trabalhadas - Eduardo Sardenberg e Victor Nielsen (1711600 e 1811545)
+19/10/2020 -> INICIO: 20:00 - TERMINO: 20/10/2020 04:30
+"""
+
 from PyQt5.QtCore import pyqtSlot
 
-__all__ = ["criaJogador","posicaoJogador"]
+__all__ = ["criaJogador","posicaoJogador", "nomeJogador", "corJogador"]
 
 Jogador_1 = []
 Jogador_2 = []

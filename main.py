@@ -1,5 +1,5 @@
 # Autor: Victor Nielsen Ribeirete (1811545)
-# Horas Trabalhadas: 28 Horas (main + jogador_peca + Interface com Menu e Regras)
+# Horas Trabalhadas: 30 Horas (main + jogador_peca + Interface com Menu e Regras)
 
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QObject
