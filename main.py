@@ -65,5 +65,3 @@ def abre_historico():
 
 interface = Interface()
 sys.exit(app.exec_())
-
-
