@@ -1,11 +1,11 @@
 # Autor: Sol Castilho Araújo de Moraes Sêda (1711600)
-# Horas Trabalhadas:
+# Horas Trabalhadas: 7 horas e meia
 """	
 Horas Trabalhadas - Sol Castilho Araújo de Moraes Sêda (1711600)	
 01/10/2020 -> INICIO: 13:00 - TERMINO: 15:00	
-07/10/2020 -> INICIO: 22:30 - TERMINO: 22:00
+07/10/2020 -> INICIO: 22:30 - TERMINO: 23:00
 10/10/2020 -> INICIO: 17:00 - TERMINO: 18:00
-19/10/2020 -> INICIO: 20:00 - TERMINO: 
+19/10/2020 -> INICIO: 20:00 - TERMINO: 00:00
          
 
 """
