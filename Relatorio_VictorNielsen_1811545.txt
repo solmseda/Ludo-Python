@@ -7,3 +7,5 @@ Refiz a arquitetura modular e estrutural, revisei os itens de backlog com o Sol,
 que são herdadas em subclasses para a adição dos eventos com os botões.
 O mesmo se diz quanto aos sinais, visto que eles precisam herdar propriedades do QObject (que é a abstração maior de um objeto QT)
 
+Ao todo estimo por volta de 30 horas no projeto.
+
