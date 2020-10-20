@@ -1,5 +1,5 @@
 # Autor: Victor Nielsen Ribeirete (1811545)
-# Horas Trabalhadas: 23 Horas (main + Interface com Menu e Regras)
+# Horas Trabalhadas: 26 Horas (main + jogador_peca + Interface com Menu e Regras)
 
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QObject
@@ -8,18 +8,20 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QLabel, QCol
 from Interface.Menu import Menu
 from Interface.Regras import Regras
 import sys
+from jogador_peca import *
 
 app = QApplication(sys.argv)
 
+__all__ = ["SinaisMain"]
 """
 Gera classe somente para lidar com os sinais enviados entre as interfaces.
 É necessário herdar as propriedades do QObject para trabalhar com os eventos
 """
-class Interface(QObject):
+class SinaisMain(QObject):
     IniciaPartida = pyqtSignal(list,list)
     PartidaInvalida = pyqtSignal()
     def __init__(self):
-        super(Interface, self).__init__()
+        super(SinaisMain, self).__init__()
         self.menu = Menu()
         self.regras = Regras()
         self.menu.show()
@@ -27,7 +29,7 @@ class Interface(QObject):
         self.menu.pushButtonRules.clicked.connect(abre_regras)
         #self.menu.pushButtonHistory.clicked.connect(abre_historico)
         self.PartidaInvalida.connect(self.menu.invalidMatch)
-        #self.IniciaPartida.connect(teste)
+        self.IniciaPartida.connect(criaJogador)
 
 
 #Recebe os nomes e cores dos jogadores providos pela inteface do Menu e checa se são todos diferentes para validar ou não a partida
@@ -74,11 +76,5 @@ def abre_historico():
         return 1
 """
 
-"""
-def teste(nomesJogadores,coresJogadores):
-    print(nomesJogadores)
-    print(coresJogadores)
-"""
-
-interface = Interface()
+sinaisMain = SinaisMain()
 sys.exit(app.exec_())

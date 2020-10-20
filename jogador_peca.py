@@ -1,14 +1,20 @@
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSignal, pyqtSlot
+from main import Main
 
-__all__ = ["posicaoJogador","numJogadores"]
+__all__ = ["criaJogador","posicaoJogador"]
+
+class SinaisJogador(Main):
+    SinalPosicao = pyqtSignal()
+    def __init__(self):
+        super(SinaisJogador, self).__init__()
+
 
 Jogador_1 = []
 Jogador_2 = []
 Jogador_3 = []
 Jogador_4 = []
 
-numJogadores = 0
-
+#Recebe as nomes e cores dos jogadores escolhidos na interface e cria os jogadores necessários para a partida
 @pyqtSlot(list,list)
 def criaJogador(nomesJogadores,coresJogadores):
     numJogadores = len(nomesJogadores)
@@ -61,6 +67,13 @@ def criaJogador(nomesJogadores,coresJogadores):
         escolheBase(Jogador_4)
         __all__.append(Jogador_4)
 
+    #Começa partida
+    print(Jogador_1)
+    print(Jogador_2)
+    print(Jogador_3)
+    print(Jogador_4)
+    #abreTabuleiro()
+
 
 def escolheBase(Jogador):
     if Jogador[1] == "Verde":
@@ -73,22 +86,25 @@ def escolheBase(Jogador):
         Jogador.append([89,90,91,92])
 
 
+def nomeJogador(Jogador):
+    return Jogador[0]
+
+
+def corJogador(Jogador):
+    return Jogador[1]
+
+
 def posicaoJogador(Jogador, peca = None):
     if peca == None:
         return Jogador[2]
     elif peca == 0:
-        return [Jogador[2][0]]
+        return Jogador[2][0]
     elif peca == 1:
-        return [Jogador[2][1]]
+        return Jogador[2][1]
     elif peca == 2:
-        return [Jogador[2][2]]
+        return Jogador[2][2]
     elif peca == 3:
-        return [Jogador[2][3]]
-    
-
-numJogadores = criaJogador(["Joao","Carlos"],["Azul","Vermelho"])
+        return Jogador[2][3]
 
 
-print(Jogador_1)
-print(Jogador_2)
-print(numJogadores)
+#def abreTabuleiro()
