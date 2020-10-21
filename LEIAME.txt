@@ -1,6 +1,5 @@
 Para rodar os testes deve-se abrir e arquivo Testes.py e rodar de acordo com a ide utilizada:
 Exemplo para a produção dos testes foi utilizado o VSCode, nesta ide deve-se pressionar Ctrl + F5 para rodar o programa.
-OBS: Os testes estão rodando através de Mockup pois um bug impediu de testas as funções do modulo main.py, quando se tentava testar ele abria a interface gráfica e não realizava os testes
 
 Para testar a interface gráfica, é necessário possuir instalado com pip o pyqt5, junto da extensão PYQT Integration.
 Rode o módulo main.py, uma janela irá se abrir:
