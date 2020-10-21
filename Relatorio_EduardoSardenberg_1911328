@@ -1,0 +1,4 @@
+Fiquei responsavel pelo modulo Jogador_Peça que armazena num vetor o nome, cor e posicao das 4 pecas de cada jogador. 
+Alem disso foi feita uma função auxiliar de criaJogador, chamada de escolheBase, que baseado na cor dele, ve onde onde 
+começam suas peças no tabuleiro. As funcoes restantes foram feitas pelo Victor.
+Não tenho uma estimativa de horas gastas nessa etapa do trabalho.
