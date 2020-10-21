@@ -11,9 +11,8 @@ import sys
 import jogadorPeca
 #import partida
 
-app = QApplication(sys.argv)
 
-__all__ = ["Interface"]
+__all__ = ["interface","validaPartida","abreRegras"]
 """
 Gera classe somente para lidar com os sinais enviados entre as interfaces.
 É necessário herdar as propriedades do QObject para trabalhar com os eventos
@@ -61,16 +60,6 @@ def validaPartida(nomesJogadores,coresJogadores):
     return 1
 
 
-#Irá iniciar a partida com as peças e o tabuleiro
-"""
-def iniciaPartida():
-    try:
-        interface.IniciaPartida.emit()
-        return 0
-    except:
-        return 1
-"""
-
 
 #Abre a interface com as regras do jogo
 @pyqtSlot()
@@ -93,5 +82,7 @@ def abreHistorico():
         return 1
 """
 
+app = QApplication(sys.argv)
 interface = Interface()
-sys.exit(app.exec_())
+if __name__ == "__main__":
+    sys.exit(app.exec_())

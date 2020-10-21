@@ -7,7 +7,7 @@ Horas Trabalhadas - Eduardo Sardenberg e Victor Nielsen (1711600 e 1811545)
 
 from PyQt5.QtCore import pyqtSlot
 
-__all__ = ["criaJogador","posicaoJogadorPecas", "nomeJogador", "corJogador"]
+__all__ = ["criaJogador","posicaoPecas", "nomeJogador", "corJogador", "escolheBase"]
 
 Jogador_1 = []
 Jogador_2 = []
@@ -17,6 +17,9 @@ Jogador_4 = []
 #Recebe as nomes e cores dos jogadores escolhidos na interface e cria os jogadores necessários para a partida
 @pyqtSlot(list,list)
 def criaJogador(nomesJogadores,coresJogadores):
+    if len(nomesJogadores) != len(coresJogadores):
+        return 1
+
     numJogadores = len(nomesJogadores)
     
     Jogador_1.append(nomesJogadores[0])
@@ -29,8 +32,6 @@ def criaJogador(nomesJogadores,coresJogadores):
     escolheBase(Jogador_2)
     __all__.append(Jogador_2)
 
-    print(Jogador_1)
-    print(Jogador_2)
 
     if numJogadores == 3:
         Jogador_3.append(nomesJogadores[2])
@@ -38,7 +39,6 @@ def criaJogador(nomesJogadores,coresJogadores):
         escolheBase(Jogador_3)
         __all__.append(Jogador_3)
 
-        print(Jogador_3)
 
     elif numJogadores == 4:
         Jogador_3.append(nomesJogadores[2])
@@ -51,19 +51,25 @@ def criaJogador(nomesJogadores,coresJogadores):
         escolheBase(Jogador_4)
         __all__.append(Jogador_4)
 
-        print(Jogador_3)
-        print(Jogador_4)
+    return 0
 
 
 def escolheBase(Jogador):
-    if Jogador[1] == "Verde":
-        Jogador.append([77,78,79,80])
-    elif Jogador[1] == "Vermelho":
-        Jogador.append([81,82,83,84])
-    elif Jogador[1] == "Azul":
-        Jogador.append([85,86,87,88])
-    elif Jogador[1] == "Amarelo":
-        Jogador.append([89,90,91,92])
+    try:
+        if Jogador[1] == "Verde":
+            Jogador.append([77,78,79,80])
+        elif Jogador[1] == "Vermelho":
+            Jogador.append([81,82,83,84])
+        elif Jogador[1] == "Azul":
+            Jogador.append([85,86,87,88])
+        elif Jogador[1] == "Amarelo":
+            Jogador.append([89,90,91,92])
+        if len(Jogador) == 3:
+            return 0
+        else:
+            return 1
+    except:
+        return 1
 
 
 def nomeJogador(Jogador):
@@ -74,7 +80,7 @@ def corJogador(Jogador):
     return Jogador[1]
 
 
-def posicaoJogadorPecas(Jogador, peca = None):
+def posicaoPecas(Jogador, peca = None):
     if peca == None:
         return Jogador[2]
     elif peca == 0:
