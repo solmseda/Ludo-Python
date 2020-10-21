@@ -15,9 +15,9 @@ from jogadorPeca import *
 
 class Testmock (unittest.TestCase):
 
-    #Testes
-    def inicio_00(self):
-        print("\n\nBateria de testes do programa:\n\n")
+    # Testes
+    def test_00_inicio(self):
+        print("\nBateria de testes do programa:")
 
 
     #------------main.py------------#
