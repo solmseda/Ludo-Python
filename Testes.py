@@ -30,7 +30,6 @@ class Testmock (unittest.TestCase):
         self.assertEqual(validaPartida(jogadores, cores), 0)
 
     def test_02_inserir_quantidade_dois_erro(self):
-        m = mock.Mock()
         jogadores = ["Mario", "Jorge"]
         cores = ["Vermelho", "Vermelho"]
         print("Caso de teste 2 - erro dois jogadores inseridos na mesma cor")
@@ -252,7 +251,6 @@ class Testmock (unittest.TestCase):
         self.assertEqual(criaJogador(jogadores, cores), 0)
 
     def test_33_criando_quantidade_dois_erro(self):
-        m = mock.Mock()
         jogadores = ["Mario", "Jorge"]
         cores = ["Vermelho", "Amarelo"]
         print("Caso de teste 33 - criando dois jogadores falhou")
