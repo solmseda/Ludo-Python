@@ -15,6 +15,10 @@ from jogadorPeca import *
 
 class Testmock (unittest.TestCase):
 
+    #Testes
+    def inicio_00(self):
+        print("\n\nBateria de testes do programa:\n\n")
+
 
     #------------main.py------------#
 
@@ -22,7 +26,7 @@ class Testmock (unittest.TestCase):
     def test_01_inserir_quantidade_dois_ok(self):
         jogadores = ["Mario", "Jorge"]
         cores = ["Vermelho", "Amarelo"]
-        print("Caso de teste 1 - inserindo dois jogadores ")
+        print("Caso de teste 1 - inserindo dois jogadores")
         self.assertEqual(validaPartida(jogadores, cores), 0)
 
     def test_02_inserir_quantidade_dois_erro(self):
