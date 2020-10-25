@@ -6,6 +6,7 @@
     <file>ludo_background.jpg</file>
     <file>ludo_icon.jpg</file>
     <file>peca.png</file>
+    <file>dice.png</file>
     <file>Ludo_board.png</file>
   </qresource>
 </RCC>

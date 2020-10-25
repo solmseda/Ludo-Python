@@ -7,6 +7,7 @@ from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QLabel, QColorDialog, QMainWindow
 from Interface.Menu import Menu
 from Interface.Regras import Regras
+from Interface.Tabuleiro import Tabuleiro
 import sys
 import jogadorPeca
 #import partida
@@ -25,6 +26,7 @@ class Interface(QObject):
         super(Interface, self).__init__()
         self.menu = Menu()
         self.regras = Regras()
+        self.tabuleiro = Tabuleiro()
         self.menu.show()
         self.menu.StartMatchSignal.connect(validaPartida)
         self.menu.pushButtonRules.clicked.connect(abreRegras)
@@ -41,23 +43,33 @@ def validaPartida(nomesJogadores,coresJogadores):
     if numJogadores == 2:
         if (coresJogadores[0] != coresJogadores[1]) and (nomesJogadores[0] != nomesJogadores[1]) and (nomesJogadores[0] != "" and nomesJogadores[1] != ""):
             interface.CriaJogador.emit(nomesJogadores,coresJogadores)
-            #iniciaPartida()
+            iniciaPartida()
             interface.menu.close()
             return 0
     elif numJogadores == 3:
         if (coresJogadores[0] != coresJogadores[1] and coresJogadores[0] != coresJogadores[2] and coresJogadores[1] != coresJogadores[2]) and (nomesJogadores[0] != nomesJogadores[1] and nomesJogadores[0] != nomesJogadores[2] and nomesJogadores[1] != nomesJogadores[2]) and (nomesJogadores[0] != "" and nomesJogadores[1] != "" and nomesJogadores[2] != ""):
             interface.CriaJogador.emit(nomesJogadores,coresJogadores)
             interface.menu.close()
-            #iniciaPartida()
+            iniciaPartida()
             return 0
     elif numJogadores == 4:
         if (coresJogadores[0] != coresJogadores[1] and coresJogadores[0] != coresJogadores[2] and coresJogadores[0] != coresJogadores[3] and coresJogadores[1] != coresJogadores[2] and coresJogadores[1] != coresJogadores[3] and coresJogadores[2] != coresJogadores[3]) and (nomesJogadores[0] != nomesJogadores[1] and nomesJogadores[0] != nomesJogadores[2] and nomesJogadores[0] != nomesJogadores[3] and nomesJogadores[1] != nomesJogadores[2] and nomesJogadores[1] != nomesJogadores[3] and nomesJogadores[2] != nomesJogadores[3]) and (nomesJogadores[0] != "" and nomesJogadores[1] != "" and nomesJogadores[2] != "" and nomesJogadores[3] != ""):
             interface.CriaJogador.emit(nomesJogadores,coresJogadores)
             interface.menu.close()
-            #iniciaPartida()
+            iniciaPartida()
             return 0
     interface.PartidaInvalida.emit()
     return 1
+
+
+#Inicia a partida com o tabuleiro do jogo
+@pyqtSlot()
+def iniciaPartida():
+    try:
+        interface.tabuleiro.show()
+        return 0
+    except:
+        return 1
 
 
 
