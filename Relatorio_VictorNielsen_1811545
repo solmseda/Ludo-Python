@@ -1,9 +1,0 @@
-Fiz uma grande parte do programa. As interfaces com o QT Designer, a lógica nas telas das interfaces com as subclasses do pyqt5
-e a logica dos sinais na comunicação entre todos os módulos presentes.
-
-Refiz a arquitetura modular e estrutural, revisei os itens de backlog com o Sol, fiz a main e parte do jogadorPeca
-
-*As classes foram necessárias para a realização das interfaces visto que o QT Designer compila seus arquivos xml para classes em Python
-que são herdadas em subclasses para a adição dos eventos com os botões.
-O mesmo se diz quanto aos sinais, visto que eles precisam herdar propriedades do QObject (que é a abstração maior de um objeto QT)
-
