@@ -7,5 +7,6 @@ Horas Trabalhadas - Sol Castilho de Moraes Sêda
 
 import random
 
-def rolaDado(num):
+def rolaDado():
     num = random.randint(1, 6)
+    return num
