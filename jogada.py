@@ -21,5 +21,8 @@ def movimentaPeca(posicoes, novasPosicoes):
     if(valida == true):
         posicoes = novasPosicoes
         return 0
+
+
+        
     else:
         return 1
