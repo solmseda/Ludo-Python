@@ -23,176 +23,263 @@ def movimentaPeca(jogadorAtual, posicaoAtual, novaPosicao):
     validaJogada(posicaoAtual, novaPosicao, valida)
     if(valida == true):
         #Caso já exista uma peça oponente na nova posição retorna ela para a base e toma o lugar
+
+        #CASO DO JOGADOR ATUAL SER O 1
         if(jogadorAtual == Jogador_1):
-            if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, 0)):
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, i)):
                 if(Jogador_2 == "Verde"):
-                    Jogador[2][0] = 77
+                    Jogador_2[2][i] = p1++
                     posicaoAtual = novaPosicao
                 else if(Jogador_2 == "Vermelho"):
-                    Jogador[2][0] = 81
+                    Jogador_2[2][i] = p2++
                     posicaoAtual = novaPosicao
                 else if (Jogador_2 == "Azul"):
-                    Jogador[2][0] = 85
+                    Jogador_2[2][i] = p3++
                     posicaoAtual = novaPosicao
                 else if (Jogador_2 == "Amarelo"):
-                    Jogador[2][0] = 89
+                    Jogador_2[2][i] = p4++
                     posicaoAtual = novaPosicao
-            
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, 1)):
-                if(Jogador_2 == "Verde"):
-                    Jogador[2][1] = 78
+
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, i)):
+                if(Jogador_3 == "Verde"):
+                    Jogador_3[2][i] = p1++
                     posicaoAtual = novaPosicao
-                else if(Jogador_2 == "Vermelho"):
-                    Jogador[2][1] = 82
+                else if(Jogador_3 == "Vermelho"):
+                    Jogador_3[2][i] = p2++
                     posicaoAtual = novaPosicao
-                else if (Jogador_2 == "Azul"):
-                    Jogador[2][1] = 86
+                else if (Jogador_3 == "Azul"):
+                    Jogador_3[2][i] = p3++
                     posicaoAtual = novaPosicao
-                else if (Jogador_2 == "Amarelo"):
-                    Jogador[2][1] = 90
+                else if (Jogador_3 == "Amarelo"):
+                    Jogador_3[2][i] = p4++
                     posicaoAtual = novaPosicao
-            
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, 2)):
-                if(Jogador_2 == "Verde"):
-                    Jogador[2][2] = 79
+
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, i)):
+                if(Jogador_4 == "Verde"):
+                    Jogador_4[2][i] = p1++
                     posicaoAtual = novaPosicao
-                else if(Jogador_2 == "Vermelho"):
-                    Jogador[2][2] = 83
+                else if(Jogador_4 == "Vermelho"):
+                    Jogador_4[2][i] = p2++
                     posicaoAtual = novaPosicao
-                else if (Jogador_2 == "Azul"):
-                    Jogador[2][2] = 87
+                else if (Jogador_4 == "Azul"):
+                    Jogador_4[2][i] = p3++
                     posicaoAtual = novaPosicao
-                else if (Jogador_2 == "Amarelo"):
-                    Jogador[2][2] = 91
-                    posicaoAtual = novaPosicao
-            
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, 3)):
-                if(Jogador_2 == "Verde"):
-                    Jogador[2][3] = 80
-                    posicaoAtual = novaPosicao
-                else if(Jogador_2 == "Vermelho"):
-                    Jogador[2][3] = 84
-                    posicaoAtual = novaPosicao
-                else if (Jogador_2 == "Azul"):
-                    Jogador[2][3] = 88
-                    posicaoAtual = novaPosicao
-                else if (Jogador_2 == "Amarelo"):
-                    Jogador[2][3] = 92
+                else if (Jogador_4 == "Amarelo"):
+                    Jogador_4[2][i] = p4++
                     posicaoAtual = novaPosicao
         
-        if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, 0)):
+
+
+
+        #CASO DO JOGADOR ATUAL SER O 2
+        if(jogadorAtual == Jogador_2):
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_1, i)):
+                if(Jogador_1 == "Verde"):
+                    Jogador_1[2][i] = p1++
+                    posicaoAtual = novaPosicao
+                else if(Jogador_1 == "Vermelho"):
+                    Jogador_1[2][i] = p2++
+                    posicaoAtual = novaPosicao
+                else if (Jogador_2 == "Azul"):
+                    Jogador_1[2][i] = p3++
+                    posicaoAtual = novaPosicao
+                else if (Jogador_1 == "Amarelo"):
+                    Jogador_1[2][i] = p4++
+                    posicaoAtual = novaPosicao
+
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, i)):
                 if(Jogador_3 == "Verde"):
-                    Jogador[3][0] = 77
+                    Jogador_3[2][i] = p1++
                     posicaoAtual = novaPosicao
                 else if(Jogador_3 == "Vermelho"):
-                    Jogador[3][0] = 81
+                    Jogador_3[2][i] = p2++
                     posicaoAtual = novaPosicao
                 else if (Jogador_3 == "Azul"):
-                    Jogador[3][0] = 85
+                    Jogador_3[2][i] = p3++
                     posicaoAtual = novaPosicao
                 else if (Jogador_3 == "Amarelo"):
-                    Jogador[3][0] = 89
+                    Jogador_3[2][i] = p4++
                     posicaoAtual = novaPosicao
-            
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, 1)):
-                if(Jogador_3 == "Verde"):
-                    Jogador[3][1] = 78
+
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, i)):
+                if(Jogador_4 == "Verde"):
+                    Jogador_4[2][i] = p1++
                     posicaoAtual = novaPosicao
-                else if(Jogador_3 == "Vermelho"):
-                    Jogador[3][1] = 82
+                else if(Jogador_4 == "Vermelho"):
+                    Jogador_4[2][i] = p2++
                     posicaoAtual = novaPosicao
-                else if (Jogador_3 == "Azul"):
-                    Jogador[3][1] = 86
+                else if (Jogador_4 == "Azul"):
+                    Jogador_4[2][i] = p3++
                     posicaoAtual = novaPosicao
-                else if (Jogador_3 == "Amarelo"):
-                    Jogador[3][1] = 90
-                    posicaoAtual = novaPosicao
-            
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, 2)):
-                if(Jogador_3 == "Verde"):
-                    Jogador[3][2] = 79
-                    posicaoAtual = novaPosicao
-                else if(Jogador_3 == "Vermelho"):
-                    Jogador[3][2] = 83
-                    posicaoAtual = novaPosicao
-                else if (Jogador_3 == "Azul"):
-                    Jogador[3][2] = 87
-                    posicaoAtual = novaPosicao
-                else if (Jogador_3 == "Amarelo"):
-                    Jogador[3][2] = 91
-                    posicaoAtual = novaPosicao
-            
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, 3)):
-                if(Jogador_3 == "Verde"):
-                    Jogador[3][3] = 80
-                    posicaoAtual = novaPosicao
-                else if(Jogador_3 == "Vermelho"):
-                    Jogador[3][3] = 84
-                    posicaoAtual = novaPosicao
-                else if (Jogador_3 == "Azul"):
-                    Jogador[3][3] = 88
-                    posicaoAtual = novaPosicao
-                else if (Jogador_3 == "Amarelo"):
-                    Jogador[3][3] = 92
+                else if (Jogador_4 == "Amarelo"):
+                    Jogador_4[2][i] = p4++
                     posicaoAtual = novaPosicao
 
 
-        if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, 0)):
-                if(Jogador_4 == "Verde"):
-                    Jogador[4][0] = 77
+        #CASO DO JOGADOR ATUAL SER O 3
+        if(jogadorAtual == Jogador_3):
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_1, i)):
+                if(Jogador_1 == "Verde"):
+                    Jogador_1[2][i] = p1++
                     posicaoAtual = novaPosicao
-                else if(Jogador_4 == "Vermelho"):
-                    Jogador[4][0] = 81
+                else if(Jogador_1 == "Vermelho"):
+                    Jogador_1[2][i] = p2++
                     posicaoAtual = novaPosicao
-                else if (Jogador_4 == "Azul"):
-                    Jogador[4][0] = 85
+                else if (Jogador_1 == "Azul"):
+                    Jogador_1[2][i] = p3++
                     posicaoAtual = novaPosicao
-                else if (Jogador_4 == "Amarelo"):
-                    Jogador[4][0] = 89
-                    posicaoAtual = novaPosicao
-            
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, 1)):
-                if(Jogador_4 == "Verde"):
-                    Jogador[4][1] = 78
-                    posicaoAtual = novaPosicao
-                else if(Jogador_4 == "Vermelho"):
-                    Jogador[4][1] = 82
-                    posicaoAtual = novaPosicao
-                else if (Jogador_4 == "Azul"):
-                    Jogador[4][1] = 86
-                    posicaoAtual = novaPosicao
-                else if (Jogador_4 == "Amarelo"):
-                    Jogador[4][1] = 90
+                else if (Jogador_1 == "Amarelo"):
+                    Jogador_1[2][i] = p4++
                     posicaoAtual = novaPosicao
             
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, 2)):
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, i)):
+                if(Jogador_2 == "Verde"):
+                    Jogador_2[2][i] = p1++
+                    posicaoAtual = novaPosicao
+                else if(Jogador_2 == "Vermelho"):
+                    Jogador_2[2][i] = p2++
+                    posicaoAtual = novaPosicao
+                else if (Jogador_2 == "Azul"):
+                    Jogador_2[2][i] = p3++
+                    posicaoAtual = novaPosicao
+                else if (Jogador_2 == "Amarelo"):
+                    Jogador_2[2][i] = p4++
+                    posicaoAtual = novaPosicao
+
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, i)):
                 if(Jogador_4 == "Verde"):
-                    Jogador[4][2] = 79
+                    Jogador_4[2][i] = p1++
                     posicaoAtual = novaPosicao
                 else if(Jogador_4 == "Vermelho"):
-                    Jogador[4][2] = 83
+                    Jogador_4[2][i] = p2++
                     posicaoAtual = novaPosicao
                 else if (Jogador_4 == "Azul"):
-                    Jogador[4][2] = 87
+                    Jogador_4[2][i] = p3++
                     posicaoAtual = novaPosicao
                 else if (Jogador_4 == "Amarelo"):
-                    Jogador[4][2] = 91
+                    Jogador_4[2][i] = p4++
+                    posicaoAtual = novaPosicao
+
+
+        #CASO DO JOGADOR ATUAL SER O 4
+        if(jogadorAtual == Jogador_4):
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_1, i)):
+                if(Jogador_1 == "Verde"):
+                    Jogador_1[2][i] = p1++
+                    posicaoAtual = novaPosicao
+                else if(Jogador_1 == "Vermelho"):
+                    Jogador_1[2][i] = p2++
+                    posicaoAtual = novaPosicao
+                else if (Jogador_1 == "Azul"):
+                    Jogador_1[2][i] = p3++
+                    posicaoAtual = novaPosicao
+                else if (Jogador_1 == "Amarelo"):
+                    Jogador_1[2][i] = p4++
                     posicaoAtual = novaPosicao
             
-            else if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, 3)):
-                if(Jogador_4 == "Verde"):
-                    Jogador[4][3] = 80
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, i)):
+                if(Jogador_2 == "Verde"):
+                    Jogador_2[2][i] = p1++
                     posicaoAtual = novaPosicao
-                else if(Jogador_4 == "Vermelho"):
-                    Jogador[4][3] = 84
+                else if(Jogador_2 == "Vermelho"):
+                    Jogador_2[2][i] = p2++
                     posicaoAtual = novaPosicao
-                else if (Jogador_4 == "Azul"):
-                    Jogador[4][3] = 88
+                else if (Jogador_2 == "Azul"):
+                    Jogador_2[2][i] = p3++
                     posicaoAtual = novaPosicao
-                else if (Jogador_4 == "Amarelo"):
-                    Jogador[4][3] = 92
+                else if (Jogador_2 == "Amarelo"):
+                    Jogador_2[2][i] = p4++
                     posicaoAtual = novaPosicao
+
+            p1 = 76
+            p2 = 80
+            p3 = 84
+            p4 = 88
+            for i in range(0, 3):
+                if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, i)):
+                if(Jogador_3 == "Verde"):
+                    Jogador_3[2][i] = p1++
+                    posicaoAtual = novaPosicao
+                else if(Jogador_3 == "Vermelho"):
+                    Jogador_3[2][i] = p2++
+                    posicaoAtual = novaPosicao
+                else if (Jogador_3 == "Azul"):
+                    Jogador_3[2][i] = p3++
+                    posicaoAtual = novaPosicao
+                else if (Jogador_3 == "Amarelo"):
+                    Jogador_3[2][i] = p4++
+                    posicaoAtual = novaPosicao
+
             
+
+
+
+        
+
+
+
+
+        #caso o lugar em que o jogador esteja tentando ir tenha uma torre
+        checaTorre()
+
+
+            
+        
         
         
         posicoes = novasPosicoes
