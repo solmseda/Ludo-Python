@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="Imagens">
+    <file>878a9e93-17e4-4bb3-8119-5c94c344f047.jpg</file>
+    <file>playerGreen.png</file>
+    <file>bluePlayer.png</file>
+    <file>playerYellow.png</file>
+    <file>playerRed.png</file>
     <file>ludo_background2.png</file>
     <file>ludo_title.png</file>
     <file>warningIcon.png</file>
