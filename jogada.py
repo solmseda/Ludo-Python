@@ -11,11 +11,9 @@ import jogadorPeca
 def rolaDado(num):
     num = random.randint(1, 6)
 
-def validaJogada(jogadores, posicoes, novasPosicoes, valida)
+def checaTorre(posicoes, valida)
 
-
-
-def checaTorre()
+def validaJogada(jogadores, posicoes, dado, novasPosicoes, valida)
 
 def movimentaPeca(posicoes, novasPosicoes):
     valida = false
