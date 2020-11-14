@@ -8,14 +8,12 @@ Horas Trabalhadas - Sol Castilho de Moraes Sêda
 import random
 import jogadorPeca
 
-def rolaDado():
-    return random.randint(1, 6)
+def rolaDado(num):
+    num = random.randint(1, 6)
 
-def validaJogada(jogadores, posicoes, novasPosicoes, valida)
+def checaTorre(posicoes, valida)
 
-
-
-def checaTorre()
+def validaJogada(jogadores, posicoes, dado, novasPosicoes, valida)
 
 def movimentaPeca(posicoes, novasPosicoes):
     valida = false
@@ -23,5 +21,8 @@ def movimentaPeca(posicoes, novasPosicoes):
     if(valida == true):
         posicoes = novasPosicoes
         return 0
+
+
+        
     else:
         return 1
