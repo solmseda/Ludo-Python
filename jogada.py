@@ -12,8 +12,17 @@ import jogadorPeca
 def rolaDado(num):
     num = random.randint(1, 6)
 
-def checaTorre():
-    posicaoPecas
+def bool checaTorre(jogador, posicao):
+    if (jogador[2][0] == posicao):
+        return True
+    else if(jogador[2][1] == posicao):
+        return True
+    else if(jogador[2][2] == posicao):
+        return True
+    else if(jogador[2][3] == posicao):
+        return True
+    return false
+
 
 def validaJogada(jogadores, posicaoAtual, dado, novaPosicao, valida)
 
@@ -266,16 +275,12 @@ def movimentaPeca(jogadorAtual, posicaoAtual, novaPosicao):
                     posicaoAtual = novaPosicao
 
             
+        """#caso o jogador esteja tentando mover uma torre
+        torre = checaTorre()
+        if (torre == true):
+            if (dado == 6):
+                posicoes = novaPosicao"""
 
-
-
-        
-
-
-
-
-        #caso o lugar em que o jogador esteja tentando ir tenha uma torre
-        checaTorre()
 
 
             
