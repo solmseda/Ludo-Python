@@ -3,7 +3,9 @@
 """	
 Horas Trabalhadas - Sol Castilho de Moraes Sêda
 11/11/2020 -> INICIO: 13:20
-14/11/2020 -> INICIO: 14:00
+14/11/2020 -> INICIO: 14:00 - TERMINO: 19:00
+15/11/2020 -> INICIO: 13:00 - TERMINO: 23:00
+
 """
 
 import random
@@ -57,6 +59,7 @@ def validaJogada(Jogador, posicaoAtual, dado, novaPosicao, valida):
     if ((novaPosicao - posicaoAtual) <= 0) or ((novaPosicao - posicaoAtual) > 6):
         valida = False 
         return 1
+    else if()
     
     #VERIFICAR PECA COME TORRE (IMPOSSIVEL DE ACONTECER)
     outra
@@ -85,9 +88,9 @@ def validaJogada(Jogador, posicaoAtual, dado, novaPosicao, valida):
     return 0
 
 
-def movimentaPeca(jogadorAtual, posicaoAtual, novaPosicao):
+def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
     valida = false
-    validaJogada(posicaoAtual, novaPosicao, valida)
+    validaJogada(posicaoAtual, novaPosicao, valida, numDado)
     if(valida == true):
         #Caso já exista uma peça oponente na nova posição retorna ela para a base e toma o lugar
 
@@ -334,17 +337,15 @@ def movimentaPeca(jogadorAtual, posicaoAtual, novaPosicao):
 
             
         """#caso o jogador esteja tentando mover uma torre
-        torre = checaTorre()
+        outroPeao
+        torre = checaTorre(jogadorAtual, posicaoAtual, outroPeao)
         if (torre == true):
-            if (dado == 6):
-                posicoes = novaPosicao"""
+            if (numDado == 6):
+                posicoes = novaPosicao
+                outroPeao = novaPosicao"""
 
-
-
-            
         
-        
-        
+        #caso de só mover para uma nova posição
         posicoes = novasPosicoes
         return 0
     else:
