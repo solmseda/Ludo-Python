@@ -15,4 +15,6 @@ Rode o módulo main.py, uma janela irá se abrir:
 	1.1 - aparecerá uma tela mostrando as regras do jogo irá
 	1.2 - para fechar essa tela clique no botão Ok situado no meio inferior
 3 - Ao clicar em Histórico nada acontece pelo o mesmo ainda não ter sido implementado
-4 - Ao clicar em Sair o programa encerrara.
+4 - Ao clicar em Sair o programa encerrara
+
+testando 
