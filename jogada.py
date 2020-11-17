@@ -39,19 +39,19 @@ def validaJogada(Jogador, posicaoAtual, dado, novaPosicao, valida):
     for i in range(0, 3):
         if(posicaoAtual == jogadorPeca.posicaoPecas(Jogador, i)):
             if(Jogador == "Verde"):
-                if(Jogador[2][i] == p1++):
+                if(Jogador[2][i] == p1+=1):
                     if(dado == 6):
                         valida = True
             else if(Jogador == "Vermelho"):
-                if(Jogador[2][i] == p2++):
+                if(Jogador[2][i] == p2+=1):
                     if(dado == 6):
                         valida = True
             else if (Jogador == "Azul"):
-                if(Jogador[2][i] == p3++):
+                if(Jogador[2][i] == p3+=1):
                     if(dado == 6):
                         valida = True
             else if (Jogador == "Amarelo"):
-                if(Jogador[2][i] == p4++):
+                if(Jogador[2][i] == p4+=1):
                     if(dado == 6):
                         valida = True
 
@@ -103,16 +103,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, i)):
                     if(Jogador_2 == "Verde"):
-                        Jogador_2[2][i] = p1++
+                        Jogador_2[2][i] = p1+=1
                         posicaoAtual = novaPosicao
                     else if(Jogador_2 == "Vermelho"):
-                        Jogador_2[2][i] = p2++
+                        Jogador_2[2][i] = p2+=1
                         posicaoAtual = novaPosicao
                     else if (Jogador_2 == "Azul"):
-                        Jogador_2[2][i] = p3++
+                        Jogador_2[2][i] = p3+=1
                         posicaoAtual = novaPosicao
                     else if (Jogador_2 == "Amarelo"):
-                        Jogador_2[2][i] = p4++
+                        Jogador_2[2][i] = p4+=1
                         posicaoAtual = novaPosicao
 
             p1 = 76
@@ -122,16 +122,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, i)):
                 if(Jogador_3 == "Verde"):
-                    Jogador_3[2][i] = p1++
+                    Jogador_3[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_3 == "Vermelho"):
-                    Jogador_3[2][i] = p2++
+                    Jogador_3[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_3 == "Azul"):
-                    Jogador_3[2][i] = p3++
+                    Jogador_3[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_3 == "Amarelo"):
-                    Jogador_3[2][i] = p4++
+                    Jogador_3[2][i] = p4+=1
                     posicaoAtual = novaPosicao
 
             p1 = 76
@@ -141,16 +141,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, i)):
                 if(Jogador_4 == "Verde"):
-                    Jogador_4[2][i] = p1++
+                    Jogador_4[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_4 == "Vermelho"):
-                    Jogador_4[2][i] = p2++
+                    Jogador_4[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_4 == "Azul"):
-                    Jogador_4[2][i] = p3++
+                    Jogador_4[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_4 == "Amarelo"):
-                    Jogador_4[2][i] = p4++
+                    Jogador_4[2][i] = p4+=1
                     posicaoAtual = novaPosicao
         
 
@@ -165,16 +165,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_1, i)):
                 if(Jogador_1 == "Verde"):
-                    Jogador_1[2][i] = p1++
+                    Jogador_1[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_1 == "Vermelho"):
-                    Jogador_1[2][i] = p2++
+                    Jogador_1[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_2 == "Azul"):
-                    Jogador_1[2][i] = p3++
+                    Jogador_1[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_1 == "Amarelo"):
-                    Jogador_1[2][i] = p4++
+                    Jogador_1[2][i] = p4+=1
                     posicaoAtual = novaPosicao
 
             p1 = 76
@@ -184,16 +184,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, i)):
                 if(Jogador_3 == "Verde"):
-                    Jogador_3[2][i] = p1++
+                    Jogador_3[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_3 == "Vermelho"):
-                    Jogador_3[2][i] = p2++
+                    Jogador_3[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_3 == "Azul"):
-                    Jogador_3[2][i] = p3++
+                    Jogador_3[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_3 == "Amarelo"):
-                    Jogador_3[2][i] = p4++
+                    Jogador_3[2][i] = p4+=1
                     posicaoAtual = novaPosicao
 
             p1 = 76
@@ -203,16 +203,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, i)):
                 if(Jogador_4 == "Verde"):
-                    Jogador_4[2][i] = p1++
+                    Jogador_4[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_4 == "Vermelho"):
-                    Jogador_4[2][i] = p2++
+                    Jogador_4[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_4 == "Azul"):
-                    Jogador_4[2][i] = p3++
+                    Jogador_4[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_4 == "Amarelo"):
-                    Jogador_4[2][i] = p4++
+                    Jogador_4[2][i] = p4+=1
                     posicaoAtual = novaPosicao
 
 
@@ -225,16 +225,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_1, i)):
                 if(Jogador_1 == "Verde"):
-                    Jogador_1[2][i] = p1++
+                    Jogador_1[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_1 == "Vermelho"):
-                    Jogador_1[2][i] = p2++
+                    Jogador_1[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_1 == "Azul"):
-                    Jogador_1[2][i] = p3++
+                    Jogador_1[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_1 == "Amarelo"):
-                    Jogador_1[2][i] = p4++
+                    Jogador_1[2][i] = p4+=1
                     posicaoAtual = novaPosicao
             
             p1 = 76
@@ -244,16 +244,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, i)):
                 if(Jogador_2 == "Verde"):
-                    Jogador_2[2][i] = p1++
+                    Jogador_2[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_2 == "Vermelho"):
-                    Jogador_2[2][i] = p2++
+                    Jogador_2[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_2 == "Azul"):
-                    Jogador_2[2][i] = p3++
+                    Jogador_2[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_2 == "Amarelo"):
-                    Jogador_2[2][i] = p4++
+                    Jogador_2[2][i] = p4+=1
                     posicaoAtual = novaPosicao
 
             p1 = 76
@@ -263,16 +263,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_4, i)):
                 if(Jogador_4 == "Verde"):
-                    Jogador_4[2][i] = p1++
+                    Jogador_4[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_4 == "Vermelho"):
-                    Jogador_4[2][i] = p2++
+                    Jogador_4[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_4 == "Azul"):
-                    Jogador_4[2][i] = p3++
+                    Jogador_4[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_4 == "Amarelo"):
-                    Jogador_4[2][i] = p4++
+                    Jogador_4[2][i] = p4+=1
                     posicaoAtual = novaPosicao
 
 
@@ -285,16 +285,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_1, i)):
                 if(Jogador_1 == "Verde"):
-                    Jogador_1[2][i] = p1++
+                    Jogador_1[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_1 == "Vermelho"):
-                    Jogador_1[2][i] = p2++
+                    Jogador_1[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_1 == "Azul"):
-                    Jogador_1[2][i] = p3++
+                    Jogador_1[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_1 == "Amarelo"):
-                    Jogador_1[2][i] = p4++
+                    Jogador_1[2][i] = p4+=1
                     posicaoAtual = novaPosicao
             
             p1 = 76
@@ -304,16 +304,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_2, i)):
                 if(Jogador_2 == "Verde"):
-                    Jogador_2[2][i] = p1++
+                    Jogador_2[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_2 == "Vermelho"):
-                    Jogador_2[2][i] = p2++
+                    Jogador_2[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_2 == "Azul"):
-                    Jogador_2[2][i] = p3++
+                    Jogador_2[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_2 == "Amarelo"):
-                    Jogador_2[2][i] = p4++
+                    Jogador_2[2][i] = p4+=1
                     posicaoAtual = novaPosicao
 
             p1 = 76
@@ -323,16 +323,16 @@ def movimentaPeca(jogadorAtual, posicaoAtual, numDado, novaPosicao):
             for i in range(0, 3):
                 if(novaPosicao == jogadorPeca.posicaoPecas(Jogador_3, i)):
                 if(Jogador_3 == "Verde"):
-                    Jogador_3[2][i] = p1++
+                    Jogador_3[2][i] = p1+=1
                     posicaoAtual = novaPosicao
                 else if(Jogador_3 == "Vermelho"):
-                    Jogador_3[2][i] = p2++
+                    Jogador_3[2][i] = p2+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_3 == "Azul"):
-                    Jogador_3[2][i] = p3++
+                    Jogador_3[2][i] = p3+=1
                     posicaoAtual = novaPosicao
                 else if (Jogador_3 == "Amarelo"):
-                    Jogador_3[2][i] = p4++
+                    Jogador_3[2][i] = p4+=1
                     posicaoAtual = novaPosicao
 
             
