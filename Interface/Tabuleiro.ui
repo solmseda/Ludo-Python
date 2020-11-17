@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1574</width>
+    <width>1322</width>
     <height>938</height>
    </rect>
   </property>
@@ -31,157 +31,148 @@
     <number>9</number>
    </property>
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QWidget" name="greenLayout" native="true">
-       <property name="styleSheet">
-        <string notr="true">QWidget#greenLayout {
-background-color: rgb(255, 170, 0);
-border-width: 2px;
-border-style: solid;
-border-color: rgb(0, 0, 0);
-border-radius: 4;
-}</string>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>5</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_3">
-          <property name="styleSheet">
-           <string notr="true">image: url(:/Imagens/playerGreen.png);</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item alignment="Qt::AlignHCenter">
-         <widget class="QLabel" name="label">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>18</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string>Nome Verde</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item alignment="Qt::AlignTop">
-        <widget class="QPushButton" name="Dice">
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>150</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>150</width>
-           <height>150</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>OpenHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">image: url(:/Imagens/dice.png);
-background-color: rgba(255, 255, 255, 0);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <spacer name="verticalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Fixed</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>5</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QWidget" name="yellowLayout" native="true">
-       <layout class="QVBoxLayout" name="verticalLayout_4">
-        <item>
-         <widget class="QLabel" name="label_4">
-          <property name="styleSheet">
-           <string notr="true">image: url(:/Imagens/playerYellow.png);</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item alignment="Qt::AlignHCenter">
-         <widget class="QLabel" name="label_2">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>18</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string>Nome Amarelo</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
+    <widget class="QWidget" name="sideBarPlayersLeft" native="true">
+     <layout class="QVBoxLayout" name="labelPlayersLeft">
+      <item>
+       <widget class="QWidget" name="greenLayout" native="true">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <spacer name="greenSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="greenImage">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="greenName">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="spaceDiceLeft" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item alignment="Qt::AlignTop">
+          <widget class="QPushButton" name="diceLeft">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>OpenHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="yellowLayout" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <spacer name="yellowSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="yellowImage">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="yellowName">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
    <item alignment="Qt::AlignHCenter">
     <widget class="QWidget" name="boardLayout" native="true">
@@ -428,7 +419,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenGreen.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -480,7 +471,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenGreen.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -521,7 +512,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenGreen.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -579,7 +570,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenGreen.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -1395,7 +1386,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenRed.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -1447,7 +1438,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenRed.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -1488,7 +1479,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenRed.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -1546,7 +1537,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenRed.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -2971,7 +2962,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenYellow.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -3023,7 +3014,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenYellow.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -3064,7 +3055,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenYellow.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -3122,7 +3113,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenYellow.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -3938,7 +3929,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenBlue.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -3990,7 +3981,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenBlue.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -4031,7 +4022,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenBlue.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -4089,7 +4080,7 @@ QPushButton:pressed {
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">image: url(:/Imagens/tokenBlue.png);</string>
+                        <string notr="true"/>
                        </property>
                        <property name="text">
                         <string/>
@@ -4147,148 +4138,145 @@ QPushButton:pressed {
     </widget>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout_5">
-     <item>
-      <widget class="QWidget" name="redLayout" native="true">
-       <layout class="QVBoxLayout" name="verticalLayout_6">
-        <item>
-         <spacer name="verticalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>5</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_5">
-          <property name="styleSheet">
-           <string notr="true">image: url(:/Imagens/playerRed.png);</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item alignment="Qt::AlignHCenter">
-         <widget class="QLabel" name="label_6">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>18</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string>Nome Vermelho</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item alignment="Qt::AlignBottom">
-        <widget class="QPushButton" name="Dice_2">
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>150</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>150</width>
-           <height>150</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>OpenHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">image: url(:/Imagens/dice.png);
-background-color: rgb(255, 255, 255, 0);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QWidget" name="blueLayout" native="true">
-       <layout class="QVBoxLayout" name="verticalLayout_7">
-        <item>
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>5</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_7">
-          <property name="styleSheet">
-           <string notr="true">image: url(:/Imagens/playerBlue.png);</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item alignment="Qt::AlignHCenter">
-         <widget class="QLabel" name="label_8">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>18</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string>Nome Azul</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
+    <widget class="QWidget" name="sideBarPlayersRight" native="true">
+     <layout class="QVBoxLayout" name="labelPlayersRight">
+      <item>
+       <widget class="QWidget" name="redLayout" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <spacer name="redSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="redImage">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="redName">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="spaceDiceRight" native="true">
+        <layout class="QHBoxLayout" name="labelDiceRight">
+         <item alignment="Qt::AlignBottom">
+          <widget class="QPushButton" name="diceRight">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>OpenHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="blueLayout" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <spacer name="blueSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="blueImage">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="blueName">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
  </widget>

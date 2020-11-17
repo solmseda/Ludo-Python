@@ -10,7 +10,7 @@ from Interface.Regras import Regras
 from Interface.Tabuleiro import Tabuleiro
 import sys
 import jogadorPeca
-#import partida
+from partida import iniciaPartida
 
 
 __all__ = ["interface","validaPartida","abreRegras"]
@@ -27,13 +27,12 @@ class Interface(QObject):
         self.menu = Menu()
         self.regras = Regras()
         self.tabuleiro = Tabuleiro()
-        self.menu.show()
         self.menu.StartMatchSignal.connect(validaPartida)
         self.menu.pushButtonRules.clicked.connect(abreRegras)
         #self.menu.pushButtonHistory.clicked.connect(abreHistorico)
         self.PartidaInvalida.connect(self.menu.invalidMatch)
         self.CriaJogador.connect(jogadorPeca.criaJogador)
-        #self.IniciaPartida.connect(partida.iniciaPartida)
+        self.menu.show()
 
 
 #Recebe os nomes e cores dos jogadores providos pela inteface do Menu e checa se são todos diferentes para validar ou não a partida
@@ -60,16 +59,6 @@ def validaPartida(nomesJogadores,coresJogadores):
             return 0
     interface.PartidaInvalida.emit()
     return 1
-
-
-#Inicia a partida com o tabuleiro do jogo
-@pyqtSlot()
-def iniciaPartida():
-    try:
-        interface.tabuleiro.show()
-        return 0
-    except:
-        return 1
 
 
 

@@ -7,12 +7,14 @@ Horas Trabalhadas - Eduardo Sardenberg e Victor Nielsen (1711600 e 1811545)
 
 from PyQt5.QtCore import pyqtSlot
 
-__all__ = ["criaJogador","posicaoPecas", "nomeJogador", "corJogador", "escolheBase"]
+__all__ = ["criaJogador","posicaoPecas", "nomeJogador", "corJogador", "escolheBase", "Jogadores"]
 
 Jogador_1 = []
 Jogador_2 = []
 Jogador_3 = []
 Jogador_4 = []
+
+Jogadores = []
 
 #Recebe as nomes e cores dos jogadores escolhidos na interface e cria os jogadores necessários para a partida
 @pyqtSlot(list,list)
@@ -25,12 +27,12 @@ def criaJogador(nomesJogadores,coresJogadores):
     Jogador_1.append(nomesJogadores[0])
     Jogador_1.append(coresJogadores[0])
     escolheBase(Jogador_1)
-    __all__.append(Jogador_1)
+    Jogadores.append(Jogador_1)
 
     Jogador_2.append(nomesJogadores[1])
     Jogador_2.append(coresJogadores[1])
     escolheBase(Jogador_2)
-    __all__.append(Jogador_2)
+    Jogadores.append(Jogador_2)
 
     print(Jogador_1)
     print(Jogador_2)
@@ -40,7 +42,7 @@ def criaJogador(nomesJogadores,coresJogadores):
         Jogador_3.append(nomesJogadores[2])
         Jogador_3.append(coresJogadores[2])
         escolheBase(Jogador_3)
-        __all__.append(Jogador_3)
+        Jogadores.append(Jogador_3)
 
         print(Jogador_3)
 
@@ -49,12 +51,12 @@ def criaJogador(nomesJogadores,coresJogadores):
         Jogador_3.append(nomesJogadores[2])
         Jogador_3.append(coresJogadores[2])
         escolheBase(Jogador_3)
-        __all__.append(Jogador_3)
+        Jogadores.append(Jogador_3)
 
         Jogador_4.append(nomesJogadores[3])
         Jogador_4.append(coresJogadores[3])
         escolheBase(Jogador_4)
-        __all__.append(Jogador_4)
+        Jogadores.append(Jogador_4)
 
         print(Jogador_3)
         print(Jogador_4)

@@ -8,6 +8,11 @@ class Tabuleiro(QWidget,Ui_Tabuleiro):
     def __init__(self):
         super(Tabuleiro, self).__init__()
         self.setupUi(self)
+        self.sideBarPlayersLeft.hide()
+        self.sideBarPlayersRight.hide()
+        self.diceLeft.setDisabled(True)
+        self.diceRight.setDisabled(True)
+
         
 
 import sys
@@ -15,3 +20,18 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     board = Tabuleiro()
     sys.exit(app.exec_())
+
+
+
+
+
+
+"""
+QWidget#greenLayout {
+background-color: rgb(255, 170, 0);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+border-radius: 4;
+}
+"""
