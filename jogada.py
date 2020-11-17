@@ -11,8 +11,8 @@ Horas Trabalhadas - Sol Castilho de Moraes Sêda
 import random
 import jogadorPeca
 
-def rolaDado(num):
-    num = random.randint(1, 6)
+def rolaDado():
+    return random.randint(1, 6)
 
 def checaTorre(jogador, posicao, outroPeao):
     if (jogador[2][0] == posicao):

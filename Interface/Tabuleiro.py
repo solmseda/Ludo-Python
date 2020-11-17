@@ -10,8 +10,8 @@ class Tabuleiro(QWidget,Ui_Tabuleiro):
         self.setupUi(self)
         self.sideBarPlayersLeft.hide()
         self.sideBarPlayersRight.hide()
-        self.diceLeft.setDisabled(True)
-        self.diceRight.setDisabled(True)
+        self.diceLeft.hide()
+        self.diceRight.hide()
 
         
 
@@ -34,4 +34,6 @@ border-style: solid;
 border-color: rgb(0, 0, 0);
 border-radius: 4;
 }
+
+image: url(:/Imagens/dice.png);
 """

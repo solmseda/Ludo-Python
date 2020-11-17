@@ -10,7 +10,7 @@ from Interface.Regras import Regras
 from Interface.Tabuleiro import Tabuleiro
 import sys
 import jogadorPeca
-from partida import iniciaPartida
+import partida
 
 
 __all__ = ["interface","validaPartida","abreRegras"]
@@ -42,20 +42,20 @@ def validaPartida(nomesJogadores,coresJogadores):
     if numJogadores == 2:
         if (coresJogadores[0] != coresJogadores[1]) and (nomesJogadores[0] != nomesJogadores[1]) and (nomesJogadores[0] != "" and nomesJogadores[1] != ""):
             interface.CriaJogador.emit(nomesJogadores,coresJogadores)
-            iniciaPartida()
+            partida.iniciaPartida()
             interface.menu.close()
             return 0
     elif numJogadores == 3:
         if (coresJogadores[0] != coresJogadores[1] and coresJogadores[0] != coresJogadores[2] and coresJogadores[1] != coresJogadores[2]) and (nomesJogadores[0] != nomesJogadores[1] and nomesJogadores[0] != nomesJogadores[2] and nomesJogadores[1] != nomesJogadores[2]) and (nomesJogadores[0] != "" and nomesJogadores[1] != "" and nomesJogadores[2] != ""):
             interface.CriaJogador.emit(nomesJogadores,coresJogadores)
             interface.menu.close()
-            iniciaPartida()
+            partida.iniciaPartida()
             return 0
     elif numJogadores == 4:
         if (coresJogadores[0] != coresJogadores[1] and coresJogadores[0] != coresJogadores[2] and coresJogadores[0] != coresJogadores[3] and coresJogadores[1] != coresJogadores[2] and coresJogadores[1] != coresJogadores[3] and coresJogadores[2] != coresJogadores[3]) and (nomesJogadores[0] != nomesJogadores[1] and nomesJogadores[0] != nomesJogadores[2] and nomesJogadores[0] != nomesJogadores[3] and nomesJogadores[1] != nomesJogadores[2] and nomesJogadores[1] != nomesJogadores[3] and nomesJogadores[2] != nomesJogadores[3]) and (nomesJogadores[0] != "" and nomesJogadores[1] != "" and nomesJogadores[2] != "" and nomesJogadores[3] != ""):
             interface.CriaJogador.emit(nomesJogadores,coresJogadores)
             interface.menu.close()
-            iniciaPartida()
+            partida.iniciaPartida()
             return 0
     interface.PartidaInvalida.emit()
     return 1
