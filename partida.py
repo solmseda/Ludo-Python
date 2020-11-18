@@ -1,5 +1,4 @@
 from jogadorPeca import *
-from itertools import cycle
 from PyQt5.QtWidgets import QApplication
 from Interface.Tabuleiro import Tabuleiro
 from PyQt5.QtCore import pyqtSlot
@@ -10,8 +9,6 @@ import jogada
 interface.menu.close()
 
 
-ordemJogadores = cycle(Jogadores)
-ordemCores = []
 
 
 @pyqtSlot()

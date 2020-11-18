@@ -9,11 +9,6 @@ from PyQt5.QtCore import pyqtSlot
 
 __all__ = ["criaJogador","posicaoPecas", "nomeJogador", "corJogador", "escolheBase", "Jogadores"]
 
-Jogador_1 = []
-Jogador_2 = []
-Jogador_3 = []
-Jogador_4 = []
-
 Jogadores = []
 
 #Recebe as nomes e cores dos jogadores escolhidos na interface e cria os jogadores necessários para a partida
@@ -21,6 +16,11 @@ Jogadores = []
 def criaJogador(nomesJogadores,coresJogadores):
     if len(nomesJogadores) != len(coresJogadores):
         return 1
+
+    Jogador_1 = []
+    Jogador_2 = []
+    Jogador_3 = []
+    Jogador_4 = []
 
     numJogadores = len(nomesJogadores)
     
