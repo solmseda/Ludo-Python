@@ -28,7 +28,7 @@ def iniciaPartida():
                 exec("interface.tabuleiro.space_"+str(peca)+".setStyleSheet('image: url(:/Imagens/tokenGreen.png);')")
             if prioridade == 0:
                 ordemCores = ["Verde","Vermelho","Azul","Amarelo"]
-                interface.NovaJogada.emit(Jogador)
+                interface.NovaJogada.emit(False)
 
         elif corJogador(Jogador) == "Amarelo":
             telaEsq = True
@@ -39,7 +39,7 @@ def iniciaPartida():
                 exec("interface.tabuleiro.space_"+str(peca)+".setStyleSheet('image: url(:/Imagens/tokenYellow.png);')")
             if prioridade == 0:
                 ordemCores = ["Amarelo","Verde","Vermelho","Azul"]
-                interface.NovaJogada.emit(Jogador)
+                interface.NovaJogada.emit(False)
 
         elif corJogador(Jogador) == "Vermelho":
             telaDir = True
@@ -50,7 +50,7 @@ def iniciaPartida():
                 exec("interface.tabuleiro.space_"+str(peca)+".setStyleSheet('image: url(:/Imagens/tokenRed.png);')")
             if prioridade == 0:
                 ordemCores = ["Vermelho","Azul","Amarelo","Verde"]
-                interface.NovaJogada.emit(Jogador)
+                interface.NovaJogada.emit(False)
 
         elif corJogador(Jogador) == "Azul":
             telaDir = True
@@ -61,7 +61,7 @@ def iniciaPartida():
                 exec("interface.tabuleiro.space_"+str(peca)+".setStyleSheet('image: url(:/Imagens/tokenBlue.png);')")
             if prioridade == 0:
                 ordemCores = ["Azul","Amarelo","Verde","Vermelho"]
-                interface.NovaJogada.emit(Jogador)
+                interface.NovaJogada.emit(False)
 
         prioridade -= 1
     """

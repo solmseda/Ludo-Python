@@ -14,6 +14,10 @@ class Tabuleiro(QWidget,Ui_Tabuleiro):
         self.diceYellow.hide()
         self.diceRed.hide()
         self.diceGreen.hide()
+        self.space_58.setDisabled(True)
+        self.space_64.setDisabled(True)
+        self.space_70.setDisabled(True)
+        self.space_76.setDisabled(True)
         
 
         

@@ -22,7 +22,7 @@ class Interface(QObject):
     IniciaPartida = pyqtSignal()
     CriaJogador = pyqtSignal(list,list)
     PartidaInvalida = pyqtSignal()
-    NovaJogada = pyqtSignal(list)
+    NovaJogada = pyqtSignal(bool)
     def __init__(self):
         super(Interface, self).__init__()
         self.menu = Menu()
