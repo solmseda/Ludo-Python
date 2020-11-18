@@ -35,6 +35,12 @@
      <layout class="QVBoxLayout" name="labelPlayersLeft">
       <item>
        <widget class="QWidget" name="greenLayout" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>283</height>
+         </size>
+        </property>
         <property name="styleSheet">
          <string notr="true"/>
         </property>
@@ -90,9 +96,47 @@
       </item>
       <item>
        <widget class="QWidget" name="spaceDiceLeft" native="true">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item alignment="Qt::AlignTop">
-          <widget class="QPushButton" name="diceLeft">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="diceGreen">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>OpenHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="diceYellow">
            <property name="minimumSize">
             <size>
              <width>150</width>
@@ -121,6 +165,12 @@
       </item>
       <item>
        <widget class="QWidget" name="yellowLayout" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>283</height>
+         </size>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_4">
          <item>
           <spacer name="yellowSpacer">
@@ -1062,7 +1112,7 @@ QPushButton:pressed {
                 <number>0</number>
                </property>
                <item>
-                <widget class="QPushButton" name="space_09">
+                <widget class="QPushButton" name="space_9">
                  <property name="minimumSize">
                   <size>
                    <width>58</width>
@@ -1164,7 +1214,7 @@ QPushButton:pressed {
                 <number>0</number>
                </property>
                <item>
-                <widget class="QPushButton" name="space_08">
+                <widget class="QPushButton" name="space_8">
                  <property name="minimumSize">
                   <size>
                    <width>58</width>
@@ -1619,7 +1669,7 @@ QPushButton:pressed {
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="space_02">
+          <widget class="QPushButton" name="space_2">
            <property name="minimumSize">
             <size>
              <width>58</width>
@@ -1644,7 +1694,7 @@ QPushButton:pressed {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="space_03">
+          <widget class="QPushButton" name="space_3">
            <property name="minimumSize">
             <size>
              <width>58</width>
@@ -1669,7 +1719,7 @@ QPushButton:pressed {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="space_04">
+          <widget class="QPushButton" name="space_4">
            <property name="minimumSize">
             <size>
              <width>58</width>
@@ -1691,32 +1741,7 @@ QPushButton:pressed {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="space_05">
-           <property name="minimumSize">
-            <size>
-             <width>58</width>
-             <height>58</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>58</width>
-             <height>58</height>
-            </size>
-           </property>
-           <property name="cursor">
-            <cursorShape>OpenHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="space_06">
+          <widget class="QPushButton" name="space_5">
            <property name="minimumSize">
             <size>
              <width>58</width>
@@ -1741,7 +1766,32 @@ QPushButton:pressed {
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="space_07">
+          <widget class="QPushButton" name="space_6">
+           <property name="minimumSize">
+            <size>
+             <width>58</width>
+             <height>58</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>58</width>
+             <height>58</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>OpenHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="space_7">
            <property name="minimumSize">
             <size>
              <width>58</width>
@@ -2019,7 +2069,7 @@ QPushButton:pressed {
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="space_01">
+          <widget class="QPushButton" name="space_1">
            <property name="minimumSize">
             <size>
              <width>58</width>
@@ -4142,6 +4192,12 @@ QPushButton:pressed {
      <layout class="QVBoxLayout" name="labelPlayersRight">
       <item>
        <widget class="QWidget" name="redLayout" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>283</height>
+         </size>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_6">
          <item>
           <spacer name="redSpacer">
@@ -4194,9 +4250,47 @@ QPushButton:pressed {
       </item>
       <item>
        <widget class="QWidget" name="spaceDiceRight" native="true">
-        <layout class="QHBoxLayout" name="labelDiceRight">
-         <item alignment="Qt::AlignBottom">
-          <widget class="QPushButton" name="diceRight">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="diceRed">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>OpenHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QPushButton" name="diceBlue">
            <property name="minimumSize">
             <size>
              <width>150</width>
@@ -4225,6 +4319,12 @@ QPushButton:pressed {
       </item>
       <item>
        <widget class="QWidget" name="blueLayout" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>283</height>
+         </size>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_7">
          <item>
           <spacer name="blueSpacer">

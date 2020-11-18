@@ -34,17 +34,12 @@ def criaJogador(nomesJogadores,coresJogadores):
     escolheBase(Jogador_2)
     Jogadores.append(Jogador_2)
 
-    print(Jogador_1)
-    print(Jogador_2)
-
 
     if numJogadores == 3:
         Jogador_3.append(nomesJogadores[2])
         Jogador_3.append(coresJogadores[2])
         escolheBase(Jogador_3)
         Jogadores.append(Jogador_3)
-
-        print(Jogador_3)
 
 
     elif numJogadores == 4:
@@ -57,9 +52,8 @@ def criaJogador(nomesJogadores,coresJogadores):
         Jogador_4.append(coresJogadores[3])
         escolheBase(Jogador_4)
         Jogadores.append(Jogador_4)
-
-        print(Jogador_3)
-        print(Jogador_4)
+    
+    print(Jogadores)
 
     return 0
 

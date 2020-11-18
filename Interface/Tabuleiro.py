@@ -10,8 +10,11 @@ class Tabuleiro(QWidget,Ui_Tabuleiro):
         self.setupUi(self)
         self.sideBarPlayersLeft.hide()
         self.sideBarPlayersRight.hide()
-        self.diceLeft.hide()
-        self.diceRight.hide()
+        self.diceBlue.hide()
+        self.diceYellow.hide()
+        self.diceRed.hide()
+        self.diceGreen.hide()
+        
 
         
 
