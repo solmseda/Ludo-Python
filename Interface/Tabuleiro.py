@@ -1,3 +1,6 @@
+#Autor: Victor Nielsen
+#Tempo: 5 minutos
+
 from Interface.Ui_Tabuleiro import Ui_Tabuleiro
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QWidget, QApplication

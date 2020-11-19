@@ -1,8 +1,0 @@
-Segunda entrega
-Implementação de testes - 7 horas e meia
-Escrita do LEIAME.txt - 5 minutos
-
-Terceira entrega
-Codificação da função movimentaPeca() no módulo jogada.py - 10 horas
-Codificação da função checaTorre() no módulo jogada.py - 2 horas
-Codificação da função validaJogada() no módulo jogada.py - 3 horas

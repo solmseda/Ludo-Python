@@ -1,3 +1,7 @@
+#Autor: Victor Nielsen
+#Tempo: 5 horas
+
+
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'c:\Users\victo\Desktop\PUC\Modular\Projeto\Ludo-Python\Interface\Menu.ui'

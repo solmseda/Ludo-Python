@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1322</width>
-    <height>938</height>
+    <height>944</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -479,6 +479,13 @@ QPushButton:pressed {
                          <height>58</height>
                         </size>
                        </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
@@ -531,6 +538,13 @@ QPushButton:pressed {
                          <height>58</height>
                         </size>
                        </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
@@ -571,6 +585,13 @@ QPushButton:pressed {
                          <width>58</width>
                          <height>58</height>
                         </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
                        </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
@@ -629,6 +650,13 @@ QPushButton:pressed {
                          <width>58</width>
                          <height>58</height>
                         </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
                        </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
@@ -731,6 +759,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -756,6 +791,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -780,6 +822,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -833,6 +882,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -858,6 +914,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -882,6 +945,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -935,6 +1005,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -960,6 +1037,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -984,6 +1068,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -1037,6 +1128,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -1062,6 +1160,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -1086,6 +1191,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -1139,6 +1251,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -1164,6 +1283,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -1188,6 +1314,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -1241,6 +1374,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -1266,6 +1406,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -1290,6 +1437,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -1696,6 +1850,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -1720,6 +1881,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -1746,6 +1914,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -1767,6 +1942,11 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>22</pointsize>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -1793,6 +1973,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -1817,6 +2004,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -1859,6 +2053,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -1900,6 +2101,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -1924,6 +2132,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -1950,6 +2165,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -1974,6 +2196,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2000,6 +2229,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2024,6 +2260,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2096,6 +2339,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2120,6 +2370,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2146,6 +2403,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2170,6 +2434,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2196,6 +2467,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2221,6 +2499,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2245,6 +2530,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2287,6 +2579,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2311,6 +2610,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2337,6 +2643,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2361,6 +2674,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2387,6 +2707,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2412,6 +2739,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2436,6 +2770,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2514,6 +2855,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2538,6 +2886,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2564,6 +2919,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2588,6 +2950,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2614,6 +2983,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2638,6 +3014,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2680,6 +3063,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2721,6 +3111,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2745,6 +3142,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2771,6 +3175,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2795,6 +3206,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -2821,6 +3239,13 @@ QPushButton:pressed {
              <height>58</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
            </property>
@@ -2845,6 +3270,13 @@ QPushButton:pressed {
              <width>58</width>
              <height>58</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="cursor">
             <cursorShape>OpenHandCursor</cursorShape>
@@ -3022,6 +3454,13 @@ QPushButton:pressed {
                          <height>58</height>
                         </size>
                        </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
@@ -3074,6 +3513,13 @@ QPushButton:pressed {
                          <height>58</height>
                         </size>
                        </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
@@ -3114,6 +3560,13 @@ QPushButton:pressed {
                          <width>58</width>
                          <height>58</height>
                         </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
                        </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
@@ -3172,6 +3625,13 @@ QPushButton:pressed {
                          <width>58</width>
                          <height>58</height>
                         </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
                        </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
@@ -3274,6 +3734,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3299,6 +3766,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3323,6 +3797,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -3376,6 +3857,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3401,6 +3889,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3425,6 +3920,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -3478,6 +3980,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3503,6 +4012,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3527,6 +4043,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -3580,6 +4103,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3605,6 +4135,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3629,6 +4166,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -3682,6 +4226,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3707,6 +4258,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3731,6 +4289,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -3784,6 +4349,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3809,6 +4381,13 @@ QPushButton:pressed {
                    <height>58</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
                  </property>
@@ -3833,6 +4412,13 @@ QPushButton:pressed {
                    <width>58</width>
                    <height>58</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
                  </property>
                  <property name="cursor">
                   <cursorShape>OpenHandCursor</cursorShape>
@@ -3989,6 +4575,13 @@ QPushButton:pressed {
                          <height>58</height>
                         </size>
                        </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
@@ -4041,6 +4634,13 @@ QPushButton:pressed {
                          <height>58</height>
                         </size>
                        </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
                        </property>
@@ -4081,6 +4681,13 @@ QPushButton:pressed {
                          <width>58</width>
                          <height>58</height>
                         </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
                        </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>
@@ -4139,6 +4746,13 @@ QPushButton:pressed {
                          <width>58</width>
                          <height>58</height>
                         </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>20</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
                        </property>
                        <property name="cursor">
                         <cursorShape>OpenHandCursor</cursorShape>

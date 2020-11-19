@@ -1,12 +1,9 @@
-# Autores: Eduardo Sardenberg e Victor Nielsen (1711600 e 1811545)
-# Horas Trabalhadas ao todo: 8 horas e meia
-"""	
-Horas Trabalhadas - Sol Castilho de Moraes Sêda
-11/11/2020 -> INICIO: 13:20
-14/11/2020 -> INICIO: 14:00 - TERMINO: 19:00
-15/11/2020 -> INICIO: 13:00 - TERMINO: 23:00
+# Autores: Todos do grupo (1711600 e 1811545)
+# Horas Trabalhadas ao todo: 40 horas
+#Victor -- 20 horas
+#Sol -- 10 horas
+#Eduardo -- 10 horas
 
-"""
 
 import random
 from jogadorPeca import *
@@ -80,18 +77,71 @@ def novaJogada(repetida):
 
 
 
+def checaTorre(Jogador,peca):
+    for cont in range(0,len(posicaoPecas(Jogador))):
+        if posicaoPecas(Jogador,peca) == posicaoPecas(Jogador,cont) and peca != cont: 
+            return True
+    return False
+        
+
+
+def checaColisao(JogadorDaVez):
+    for Jogador in Jogadores:
+        if Jogador != JogadorDaVez:
+            if bool(set(posicaoPecas(JogadorDaVez)).intersection(posicaoPecas(Jogador))):
+                return [True,Jogador]
+    return [False]
+
+
+
 def validaJogada(JogadorDaVez, valoresDado):
     if dadoRolado == True:
         peca = 0
+        livre = False
         global numJogada
         for posicaoPeca in posicaoPecas(JogadorDaVez):
             if interface.tabuleiro.sender().objectName() == "space_"+str(posicaoPeca):
-                movimentaPeca(JogadorDaVez, peca, valoresDado[numJogada-1])
+                if checaTorre(JogadorDaVez,peca) == False:
+                    movimentaPeca(JogadorDaVez, peca, valoresDado[numJogada-1])
+                    return
+                elif checaTorre(JogadorDaVez,peca) == True:
+                    movimentaPeca(JogadorDaVez, peca, valoresDado[numJogada-1])
+                    if corJogador(JogadorDaVez) == "Verde":
+                        exec("interface.tabuleiro.space_"+str(posicaoPeca)+".setStyleSheet('image: url(:/Imagens/tokenGreen.png);')")
+                    elif corJogador(JogadorDaVez) == "Amarelo":
+                        exec("interface.tabuleiro.space_"+str(posicaoPeca)+".setStyleSheet('image: url(:/Imagens/tokenYellow.png);')")
+                    elif corJogador(JogadorDaVez) == "Vermelho":
+                        exec("interface.tabuleiro.space_"+str(posicaoPeca)+".setStyleSheet('image: url(:/Imagens/tokenRed.png);')")
+                    elif corJogador(JogadorDaVez) == "Azul":
+                        exec("interface.tabuleiro.space_"+str(posicaoPeca)+".setStyleSheet('image: url(:/Imagens/tokenBlue.png);')")
+                    return
             peca += 1
 
 
 
-def movimentaPeca(JogadorDaVez, peca, dado):
+def retornaBase(Jogador,peca):
+    for cont in range(0,4):
+        if posicaoPecas(Jogador,peca) == posicaoPecas(Jogador,cont):
+            exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setStyleSheet('');")
+            if corJogador(Jogador) == "Verde":
+                Jogador[2][cont] = 77+cont
+                exec("interface.tabuleiro.space_"+str(77+cont)+".setStyleSheet('image: url(:/Imagens/tokenGreen.png);');")
+            elif corJogador(Jogador) == "Amarelo":
+                Jogador[2][cont] = 89+cont
+                exec("interface.tabuleiro.space_"+str(89+cont)+".setStyleSheet('image: url(:/Imagens/tokenYellow.png);');")
+            elif corJogador(Jogador) == "Vermelho":
+                Jogador[2][cont] = 81+cont
+                exec("interface.tabuleiro.space_"+str(81+cont)+".setStyleSheet('image: url(:/Imagens/tokenRed.png);');")
+            elif corJogador(Jogador) == "Azul":
+                Jogador[2][cont] = 85+cont
+                exec("interface.tabuleiro.space_"+str(85+cont)+".setStyleSheet('image: url(:/Imagens/tokenBlue.png);');")
+
+
+
+def movimentaPeca(JogadorDaVez, peca, dado, visualização = False):
+
+    ação = []
+    JogadorInicial = JogadorDaVez
 
     if corJogador(JogadorDaVez) == "Verde":
         #Quando está na base
@@ -138,7 +188,7 @@ def movimentaPeca(JogadorDaVez, peca, dado):
             exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setStyleSheet('');")
             for cont in range(0,len(Jogadores)):
                 if Jogadores[cont] == JogadorDaVez:
-                    if posicaoPecas(JogadorDaVez,peca)<40 and posicaoPecas(JogadorDaVez,peca)+dado > 40:
+                    if posicaoPecas(JogadorDaVez,peca)<=40 and posicaoPecas(JogadorDaVez,peca)+dado > 40:
                         Jogadores[cont][2][peca] = 70 + abs(40-(posicaoPecas(JogadorDaVez,peca)+dado))
                     else:
                         Jogadores[cont][2][peca] = (posicaoPecas(JogadorDaVez,peca)+dado)%52
@@ -167,7 +217,7 @@ def movimentaPeca(JogadorDaVez, peca, dado):
             exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setStyleSheet('');")
             for cont in range(0,len(Jogadores)):
                 if Jogadores[cont] == JogadorDaVez:
-                    if posicaoPecas(JogadorDaVez,peca)<14 and posicaoPecas(JogadorDaVez,peca)+dado > 14:
+                    if posicaoPecas(JogadorDaVez,peca)<=14 and posicaoPecas(JogadorDaVez,peca)+dado > 14:
                         Jogadores[cont][2][peca] = 58 + abs(14-(posicaoPecas(JogadorDaVez,peca)+dado))
                     else:
                         Jogadores[cont][2][peca] = (posicaoPecas(JogadorDaVez,peca)+dado)%52
@@ -196,7 +246,7 @@ def movimentaPeca(JogadorDaVez, peca, dado):
             exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setStyleSheet('');")
             for cont in range(0,len(Jogadores)):
                 if Jogadores[cont] == JogadorDaVez:
-                    if posicaoPecas(JogadorDaVez,peca)<27 and posicaoPecas(JogadorDaVez,peca)+dado > 27:
+                    if posicaoPecas(JogadorDaVez,peca)<=27 and posicaoPecas(JogadorDaVez,peca)+dado > 27:
                         Jogadores[cont][2][peca] = 64 + abs(27-(posicaoPecas(JogadorDaVez,peca)+dado))
                     else:
                         Jogadores[cont][2][peca] = (posicaoPecas(JogadorDaVez,peca)+dado)%52
@@ -210,6 +260,17 @@ def movimentaPeca(JogadorDaVez, peca, dado):
                 if Jogadores[cont] == JogadorDaVez:
                     Jogadores[cont][2][peca] = 70-abs(70-(posicaoPecas(JogadorDaVez,peca)+dado))
             exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setStyleSheet('image: url(:/Imagens/tokenBlue.png);');")
+
+    if checaTorre(JogadorDaVez,peca):
+        exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setText('+')")
+    else:
+        exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorInicial,peca))+".setText('')")
+
+
+    if checaColisao(JogadorDaVez)[0]:
+        retornaBase(checaColisao(JogadorDaVez)[1],peca)
+
+
 
     print(Jogadores)
 

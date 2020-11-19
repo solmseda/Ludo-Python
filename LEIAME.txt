@@ -17,4 +17,3 @@ Rode o módulo main.py, uma janela irá se abrir:
 3 - Ao clicar em Histórico nada acontece pelo o mesmo ainda não ter sido implementado
 4 - Ao clicar em Sair o programa encerrara
 
-testando 

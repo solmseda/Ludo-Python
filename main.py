@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QLabel, QCol
 from Interface.Menu import Menu
 from Interface.Regras import Regras
 from Interface.Tabuleiro import Tabuleiro
+from Interface.Ui_FimdeJogo import Ui_Form
 import sys
 import jogadorPeca
 import partida

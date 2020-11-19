@@ -1,3 +1,6 @@
+#Autor: Victor Nielsen
+#Tempo: 4 horas
+
 from jogadorPeca import *
 from PyQt5.QtWidgets import QApplication
 from Interface.Tabuleiro import Tabuleiro
