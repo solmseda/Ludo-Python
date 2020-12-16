@@ -9,6 +9,7 @@ import random
 from jogadorPeca import *
 from PyQt5.QtCore import pyqtSlot
 from main import interface
+import partida
 
 
 dadoRolado = False
@@ -91,6 +92,10 @@ def checaColisao(JogadorDaVez):
             if bool(set(posicaoPecas(JogadorDaVez)).intersection(posicaoPecas(Jogador))):
                 return [True,Jogador]
     return [False]
+
+
+
+
 
 
 
@@ -268,17 +273,32 @@ def movimentaPeca(JogadorDaVez, peca, dado, visualização = False):
     else:
         exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorInicial,peca))+".setText('')")
 
-    print(Jogadores)
-    #Mudar depois
 
     if checaColisao(JogadorDaVez)[0]:
         retornaBase(checaColisao(JogadorDaVez)[1],peca)
 
+    if checaVencedor(JogadorDaVez)[0]:
+        partida.finalizaPartida(checaVencedor(JogadorDaVez)[1])
 
     print(Jogadores)
-    
-
     novaJogada(False)
+
+
+
+def checaVencedor(JogadorDaVez):
+    for peca in range(0,4):
+
+        if corJogador(JogadorDaVez) == "Verde" and posicaoPecas(JogadorDaVez, peca) != 58:
+            return [False]
+        if corJogador(JogadorDaVez) == "Vermelho" and posicaoPecas(JogadorDaVez, peca) != 64:
+            return [False]
+        elif corJogador(JogadorDaVez) == "Azul" and posicaoPecas(JogadorDaVez, peca) != 70:
+            return [False]
+        elif corJogador(JogadorDaVez) == "Amarelo" and posicaoPecas(JogadorDaVez, peca) != 76:
+            return [False]
+
+    return [True, JogadorDaVez]
+
 
 
 interface.tabuleiro.diceBlue.clicked.connect(rolaDado)

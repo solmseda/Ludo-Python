@@ -12,6 +12,7 @@ import jogada
 interface.menu.close()
 
 
+all = ["finalizaPartida"]
 
 
 @pyqtSlot()
@@ -87,7 +88,8 @@ def iniciaPartida():
     
 
     
-
+def finalizaPartida(Vencedor):
+    interface.tabuleiro.close()
     
 
 
