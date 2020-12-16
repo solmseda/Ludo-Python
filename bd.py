@@ -1,16 +1,19 @@
 import mysql.connector
 from mysql.connector import Error
+from jogadorPeca import *
+
+
 
 def criarDataBase():
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
+        connection = mysql.connector.connect(host='localhost', user='root', password='Viniri00')
 
         sql = "CREATE DATABASE Modular"
         cursor = connection.cursor()
         cursor.execute(sql)
         connection.commit()
 
-        print(cursor.rowcount, "Tabela Criada")
+        print(cursor.rowcount, "Banco de Dados criado")
         cursor.close()
 
     except Error as e:
@@ -24,8 +27,8 @@ def criarDataBase():
 
 def criarTabela():
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
-        sql = "CREATE TABLE Partida ( n_partida int not null PRIMARY KEY AUTO_INCREMENT, jogador_1 varchar(30), jogador_2 varchar(30), jogador_3 varchar(30), jogador_4 varchar(30), vencedor varchar(30) not null)"
+        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
+        sql = "CREATE TABLE Partida ( n_partida int not null PRIMARY KEY AUTO_INCREMENT, vencedor varchar(30) not null, numeroJogadores int not null, jogador_1 varchar(30) not null, jogador_2 varchar(30) not null, jogador_3 varchar(30), jogador_4 varchar(30))"
         cursor = connection.cursor()
         cursor.execute(sql)
         connection.commit()
@@ -41,17 +44,18 @@ def criarTabela():
             connection.close()
             print("Conexão encerrada")
 
-def inserePartida(jogadoresLista, vencedor):
+
+def inserePartida(Vencedor):
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
+        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
         cursor = connection.cursor()
-        quant = len(jogadoresLista)
+        quant = len(Jogadores)
         if (quant == 2):
-            cursor.execute("INSERT INTO Partida (Jogador_1, Jogador_2, vencedor) VALUES (%s,%s,%s)" , (jogadoresLista[0] , jogadoresLista[1], vencedor))
+            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, CorJogador_1, CorJogador_2) VALUES (%s,%s,%s,%s,%s,%s)" , (Vencedor , quant , nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]) , corJogador(Jogadores[0]) , corJogador(Jogadores[1])))
         elif (quant == 3):
-            cursor.execute("INSERT INTO Partida (Jogador_1, Jogador_2, vencedor) VALUES (%s,%s,%s,%s)" , (jogadoresLista[0] , jogadoresLista[1], jogadoresLista[2], vencedor))
+            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, Jogador_3, CorJogador_1, CorJogador_2, CorJogador_3) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)" , (Vencedor, quant, nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]), nomeJogador(Jogadores[2]) , corJogador(Jogadores[0]) , corJogador(Jogadores[1]) , corJogador(Jogadores[2])))
         elif (quant == 4):
-            cursor.execute("INSERT INTO Partida (Jogador_1, Jogador_2, vencedor) VALUES (%s,%s,%s,%s,%s)" , (jogadoresLista[0] , jogadoresLista[1], jogadoresLista[2], jogadoresLista[3], vencedor))
+            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, Jogador_3, Jogador_4, CorJogador_1, CorJogador_2, CorJogador_3, CorJogador_4) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" , (Vencedor, quant, nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]), nomeJogador(Jogadores[2]) , nomeJogador(Jogadores[3]) , corJogador(Jogadores[0]) , corJogador(Jogadores[1]) , corJogador(Jogadores[2]) , corJogador(Jogadores[3])))
         
         connection.commit()
 
@@ -66,9 +70,10 @@ def inserePartida(jogadoresLista, vencedor):
             connection.close()
             print("Conexão encerrada")
 
+
 def recuperaPartida():
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
+        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
         sql = "SELECT * FROM Partida"
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -84,30 +89,13 @@ def recuperaPartida():
             connection.close()
             print("Conexão encerrada")
 
-    
+    return rs
 
-def descreve():
-    try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
 
-        sql = "DESCRIBE Partida"
-        cursor = connection.cursor()
-        cursor.execute(sql)
-
-        print(cursor.rowcount, "Tabela Criada")
-        cursor.close()
-
-    except Error as e:
-        print("Erro de conexão", e)
-    finally:
-        if(connection.is_connected()):
-            cursor.close()
-            connection.close()
-            print("Conexão encerrada")
 
 def dropPartida():
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
+        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
 
         sql = "DROP TABLE Partida"
         cursor = connection.cursor()
@@ -123,6 +111,7 @@ def dropPartida():
             cursor.close()
             connection.close()
             print("Conexão encerrada")
+
 
 
 

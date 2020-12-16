@@ -1,0 +1,5 @@
+from bd import *
+
+
+
+criarDataBase()

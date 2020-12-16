@@ -12,6 +12,7 @@ from Interface.Ui_FimdeJogo import Ui_Form
 import sys
 import jogadorPeca
 import partida
+import bd
 
 
 __all__ = ["interface","validaPartida","abreRegras"]
@@ -88,4 +89,7 @@ def abreHistorico():
 app = QApplication(sys.argv)
 interface = Interface()
 if __name__ == "__main__":
+    bd.criarDataBase()
+    bd.criarTabela()
     sys.exit(app.exec_())
+

@@ -119,23 +119,25 @@ def validaJogada(JogadorDaVez, valoresDado):
 
 
 
-def retornaBase(Jogador,peca):
+def retornaBase(outroJogador,peca):
+    for cont in range(0,len(Jogadores)):
+        if Jogadores[cont] == outroJogador:
+            pos = cont
     for cont in range(0,4):
-        if posicaoPecas(Jogador,peca) == posicaoPecas(Jogador,cont):
-            exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setStyleSheet('');")
-            if corJogador(Jogador) == "Verde":
-                Jogador[2][cont] = 77+cont
+        if posicaoPecas(outroJogador,peca) == posicaoPecas(outroJogador,cont):
+            if corJogador(outroJogador) == "Verde":
+                Jogadores[pos][2][cont] = 77+cont
                 exec("interface.tabuleiro.space_"+str(77+cont)+".setStyleSheet('image: url(:/Imagens/tokenGreen.png);');")
-            elif corJogador(Jogador) == "Amarelo":
-                Jogador[2][cont] = 89+cont
+            elif corJogador(outroJogador) == "Amarelo":
+                Jogadores[pos][2][cont] = 89+cont
                 exec("interface.tabuleiro.space_"+str(89+cont)+".setStyleSheet('image: url(:/Imagens/tokenYellow.png);');")
-            elif corJogador(Jogador) == "Vermelho":
-                Jogador[2][cont] = 81+cont
+            elif corJogador(outroJogador) == "Vermelho":
+                Jogadores[pos][2][cont] = 81+cont
                 exec("interface.tabuleiro.space_"+str(81+cont)+".setStyleSheet('image: url(:/Imagens/tokenRed.png);');")
-            elif corJogador(Jogador) == "Azul":
-                Jogador[2][cont] = 85+cont
+            elif corJogador(outroJogador) == "Azul":
+                Jogadores[pos][2][cont] = 85+cont
                 exec("interface.tabuleiro.space_"+str(85+cont)+".setStyleSheet('image: url(:/Imagens/tokenBlue.png);');")
-
+         
 
 
 def movimentaPeca(JogadorDaVez, peca, dado, visualização = False):
@@ -266,13 +268,15 @@ def movimentaPeca(JogadorDaVez, peca, dado, visualização = False):
     else:
         exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorInicial,peca))+".setText('')")
 
+    print(Jogadores)
+    #Mudar depois
 
     if checaColisao(JogadorDaVez)[0]:
         retornaBase(checaColisao(JogadorDaVez)[1],peca)
 
 
-
     print(Jogadores)
+    
 
     novaJogada(False)
 
