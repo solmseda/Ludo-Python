@@ -1,10 +1,11 @@
 <RCC>
   <qresource prefix="Imagens">
+    <file>imageHistory.png</file>
+    <file>infoIcon.png</file>
     <file>tokenBlue.png</file>
     <file>tokenGreen.png</file>
     <file>tokenRed.png</file>
     <file>tokenYellow.png</file>
-    <file>878a9e93-17e4-4bb3-8119-5c94c344f047.jpg</file>
     <file>playerGreen.png</file>
     <file>playerYellow.png</file>
     <file>playerBlue.png</file>
