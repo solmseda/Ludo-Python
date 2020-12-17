@@ -4,11 +4,12 @@
 from jogadorPeca import *
 from PyQt5.QtWidgets import QApplication
 from Interface.Tabuleiro import Tabuleiro
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, pyqtSignal
 import random
 import sys
 from main import *
 import jogada
+from Interface.FimdeJogo import FimdeJogo
 interface.menu.close()
 
 
@@ -85,13 +86,20 @@ def iniciaPartida():
     interface.tabuleiro.show()
     interface.menu.close()
 
-    
+
+
+def reinicia():
+    import os
+    os.execv(sys.executable, ['python'] + sys.argv)
+
 
     
 def finalizaPartida(Vencedor):
-    interface.tabuleiro.close()
+    print(nomeJogador(Vencedor))
+    interface.fimDeJogo.geraVencedor(Vencedor)
+    interface.fimDeJogo.pushButtonMenu.clicked.connect(reinicia)
+    interface.fimDeJogo.show()
+
     
-
-
 
 interface.NovaJogada.connect(jogada.novaJogada)

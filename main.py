@@ -8,11 +8,12 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QLabel, QCol
 from Interface.Menu import Menu
 from Interface.Regras import Regras
 from Interface.Tabuleiro import Tabuleiro
-from Interface.Ui_FimdeJogo import Ui_Form
+from Interface.FimdeJogo import FimdeJogo
 import sys
 import jogadorPeca
 import partida
 import bd
+import os
 
 
 __all__ = ["interface","validaPartida","abreRegras"]
@@ -30,6 +31,8 @@ class Interface(QObject):
         self.menu = Menu()
         self.regras = Regras()
         self.tabuleiro = Tabuleiro()
+        self.fimDeJogo = FimdeJogo()
+        self.fimDeJogo.pushButtonExit.clicked.connect(quit)
         self.menu.StartMatchSignal.connect(validaPartida)
         self.menu.pushButtonRules.clicked.connect(abreRegras)
         #self.menu.pushButtonHistory.clicked.connect(abreHistorico)
@@ -73,6 +76,8 @@ def abreRegras():
         return 0
     except:
         return 1
+
+
 
 
 #Irá abrir a interface com o histórico de partidas com os nomes dos jogadores de cada partida e o vencedor

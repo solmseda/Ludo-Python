@@ -268,19 +268,15 @@ def movimentaPeca(JogadorDaVez, peca, dado, visualização = False):
                     Jogadores[cont][2][peca] = 70-abs(70-(posicaoPecas(JogadorDaVez,peca)+dado))
             exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setStyleSheet('image: url(:/Imagens/tokenBlue.png);');")
 
-    if checaTorre(JogadorDaVez,peca):
-        exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorDaVez,peca))+".setText('+')")
-    else:
-        exec("interface.tabuleiro.space_"+str(posicaoPecas(JogadorInicial,peca))+".setText('')")
-
 
     if checaColisao(JogadorDaVez)[0]:
         retornaBase(checaColisao(JogadorDaVez)[1],peca)
 
+    print(Jogadores)
+
     if checaVencedor(JogadorDaVez)[0]:
         partida.finalizaPartida(checaVencedor(JogadorDaVez)[1])
 
-    print(Jogadores)
     novaJogada(False)
 
 
