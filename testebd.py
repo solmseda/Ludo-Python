@@ -1,3 +1,3 @@
 from bd import *
 
-recuperaPartida()
+dropPartida()

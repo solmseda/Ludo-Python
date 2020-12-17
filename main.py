@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QLabel, QCol
 from Interface.Menu import Menu
 from Interface.Regras import Regras
 from Interface.Historico import Historico
+from Interface.Historico_Modulo import Historico_Modulo
 from Interface.Tabuleiro import Tabuleiro
 from Interface.FimdeJogo import FimdeJogo
 import sys
@@ -32,6 +33,12 @@ class Interface(QObject):
         self.menu = Menu()
         self.regras = Regras()
         self.historico = Historico()
+        partidas = bd.recuperaPartida()
+        if partidas is not None:
+            for tupla in partidas:
+                partida = list(tupla)
+                exec("partida_"+str(partida[0])+" = Historico_Modulo(partida)")
+                exec("self.historico.scrollArea.setWidget(partida_"+str(partida[0])+")")
         self.tabuleiro = Tabuleiro()
         self.fimDeJogo = FimdeJogo()
         self.fimDeJogo.pushButtonExit.clicked.connect(quit)
@@ -87,7 +94,6 @@ def abreRegras():
 @pyqtSlot()
 def abreHistorico():
     try:
-        interface.historico.fillHistory()
         interface.historico.show()
         return 0
     except:
@@ -98,6 +104,5 @@ app = QApplication(sys.argv)
 interface = Interface()
 if __name__ == "__main__":
     bd.criarDataBase()
-    bd.criarTabela()
     sys.exit(app.exec_())
 

@@ -23,8 +23,18 @@ class Historico(QWidget,Ui_Historico):
         for tupla in partidas:
             partida = list(tupla)
             exec("partida_"+str(partida[0])+" = Historico_Modulo(partida)")
+            exec("self.scrollAreaWidgetContents.setWidget(partida_"+str(partida[0]))
         return
 
 
     def clearHistory(self):
+        if self.scrollArea is not None:
+            while self.scrollArea.count():
+                item = self.scrollArea.takeAt(0)
+                widget = item.widget()
+                if widget is not None:
+                    widget.deleteLater()
+                else:
+                    self.clearLayout(item.layout())
         bd.dropPartida()
+        return

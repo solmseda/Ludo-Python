@@ -20,6 +20,7 @@ all = ["finalizaPartida"]
 @pyqtSlot()
 def iniciaPartida():
 
+    bd.criarTabela()
     telaEsq = False
     telaDir = False
     prioridade = random.randint(0,len(Jogadores)-1)
@@ -98,7 +99,7 @@ def reinicia():
 def finalizaPartida(Vencedor):
     print("Vencedor: "+nomeJogador(Vencedor))
     interface.fimDeJogo.geraVencedor(Vencedor)
-    bd.inserePartida(nomeJogador(Vencedor))
+    bd.inserePartida(nomeJogador(Vencedor),corJogador(Vencedor))
 
     interface.fimDeJogo.pushButtonMenu.clicked.connect(reinicia)
     interface.fimDeJogo.show()
