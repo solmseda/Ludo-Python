@@ -8,7 +8,7 @@ from jogadorPeca import *
 
 def criarDataBase():
     try:
-        connection = mysql.connector.connect(host='localhost', user='root', password='Viniri00')
+        connection = mysql.connector.connect(host='localhost', user='root', password='root')
 
         sql = "CREATE DATABASE Modular"
         cursor = connection.cursor()
@@ -29,7 +29,7 @@ def criarDataBase():
 
 def criarTabela():
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
+        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
         sql = "CREATE TABLE Partida ( n_partida int not null PRIMARY KEY AUTO_INCREMENT, vencedor varchar(30) not null, corVencedor varchar(10) not null, numeroJogadores varchar(3) not null, jogador_1 varchar(30) not null, jogador_2 varchar(30) not null, jogador_3 varchar(30), jogador_4 varchar(30), corJogador_1 varchar(10) not null, corJogador_2 varchar(10) not null, corJogador_3 varchar(10), corJogador_4 varchar(10))"
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -49,7 +49,7 @@ def criarTabela():
 
 def inserePartida(Vencedor,corVencedor):
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
+        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
         cursor = connection.cursor()
         quant = len(Jogadores)
         if (quant == 2):
@@ -75,7 +75,7 @@ def inserePartida(Vencedor,corVencedor):
 
 def recuperaPartida():
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
+        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
         sql = "SELECT * FROM Partida"
         cursor = connection.cursor()
         cursor.execute(sql)
@@ -99,7 +99,7 @@ def recuperaPartida():
 
 def dropPartida():
     try:
-        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
+        connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='root')
 
         sql = "DROP TABLE Partida"
         cursor = connection.cursor()
