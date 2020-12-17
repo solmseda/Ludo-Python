@@ -38,7 +38,7 @@ class Interface(QObject):
             for tupla in partidas:
                 partida = list(tupla)
                 exec("partida_"+str(partida[0])+" = Historico_Modulo(partida)")
-                exec("self.historico.scrollArea.setWidget(partida_"+str(partida[0])+")")
+                exec("self.historico.verticalLayoutScrollArea.addWidget(partida_"+str(partida[0])+")")
         self.tabuleiro = Tabuleiro()
         self.fimDeJogo = FimdeJogo()
         self.fimDeJogo.pushButtonExit.clicked.connect(quit)

@@ -14,9 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Historico(object):
     def setupUi(self, Historico):
         Historico.setObjectName("Historico")
-        Historico.resize(746, 766)
-        Historico.setMinimumSize(QtCore.QSize(746, 766))
-        Historico.setMaximumSize(QtCore.QSize(746, 766))
+        Historico.resize(746, 790)
+        Historico.setMinimumSize(QtCore.QSize(746, 790))
+        Historico.setMaximumSize(QtCore.QSize(746, 790))
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/Imagens/ludo_icon.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Historico.setWindowIcon(icon)
@@ -94,6 +94,8 @@ class Ui_Historico(object):
         self.verticalLayoutScrollArea.setObjectName("verticalLayoutScrollArea")
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout.addWidget(self.scrollArea)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 4, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.verticalLayout.addItem(spacerItem2)
 
         self.retranslateUi(Historico)
         QtCore.QMetaObject.connectSlotsByName(Historico)
