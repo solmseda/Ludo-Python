@@ -15,6 +15,15 @@ class Ui_Historico_Modulo(object):
     def setupUi(self, Historico_Modulo):
         Historico_Modulo.setObjectName("Historico_Modulo")
         Historico_Modulo.resize(728, 83)
+        Historico_Modulo.setMinimumSize(QtCore.QSize(728, 83))
+        Historico_Modulo.setMaximumSize(QtCore.QSize(728, 83))
+        Historico_Modulo.setStyleSheet("QWidget#Historico_Modulo {\n"
+"    background-color: rgb(19, 202, 190);\n"
+"\n"
+"    border-width: 2px;\n"
+"    border-style: solid;\n"
+"    border-radius: 4;\n"
+"}")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Historico_Modulo)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.matchNumber = QtWidgets.QLabel(Historico_Modulo)
@@ -26,6 +35,7 @@ class Ui_Historico_Modulo(object):
         font.setBold(True)
         font.setWeight(75)
         self.matchNumber.setFont(font)
+        self.matchNumber.setText("")
         self.matchNumber.setAlignment(QtCore.Qt.AlignCenter)
         self.matchNumber.setObjectName("matchNumber")
         self.horizontalLayout.addWidget(self.matchNumber, 0, QtCore.Qt.AlignLeft)
@@ -34,7 +44,6 @@ class Ui_Historico_Modulo(object):
         self.winnerImage = QtWidgets.QLabel(Historico_Modulo)
         self.winnerImage.setMinimumSize(QtCore.QSize(70, 0))
         self.winnerImage.setMaximumSize(QtCore.QSize(70, 16777215))
-        self.winnerImage.setStyleSheet("image: url(:/Imagens/playerBlue.png);")
         self.winnerImage.setText("")
         self.winnerImage.setObjectName("winnerImage")
         self.horizontalLayout.addWidget(self.winnerImage)
@@ -46,6 +55,7 @@ class Ui_Historico_Modulo(object):
         font.setBold(True)
         font.setWeight(75)
         self.winnerName.setFont(font)
+        self.winnerName.setText("")
         self.winnerName.setObjectName("winnerName")
         self.horizontalLayout.addWidget(self.winnerName, 0, QtCore.Qt.AlignLeft)
         spacerItem1 = QtWidgets.QSpacerItem(50, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
@@ -57,6 +67,7 @@ class Ui_Historico_Modulo(object):
         font.setBold(False)
         font.setWeight(50)
         self.numberPlayers.setFont(font)
+        self.numberPlayers.setText("")
         self.numberPlayers.setAlignment(QtCore.Qt.AlignCenter)
         self.numberPlayers.setObjectName("numberPlayers")
         self.horizontalLayout.addWidget(self.numberPlayers, 0, QtCore.Qt.AlignLeft)
@@ -83,7 +94,4 @@ class Ui_Historico_Modulo(object):
     def retranslateUi(self, Historico_Modulo):
         _translate = QtCore.QCoreApplication.translate
         Historico_Modulo.setWindowTitle(_translate("Historico_Modulo", "Form"))
-        self.matchNumber.setText(_translate("Historico_Modulo", "P1"))
-        self.winnerName.setText(_translate("Historico_Modulo", "Jogadorxxx"))
-        self.numberPlayers.setText(_translate("Historico_Modulo", "X Jogadores"))
 import Interface.Resources.resources_rc

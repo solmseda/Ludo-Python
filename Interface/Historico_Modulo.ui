@@ -10,8 +10,29 @@
     <height>83</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>728</width>
+    <height>83</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>728</width>
+    <height>83</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Historico_Modulo {
+	background-color: rgb(19, 202, 190);
+
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 4;
+}</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item alignment="Qt::AlignLeft">
@@ -42,7 +63,7 @@
       </font>
      </property>
      <property name="text">
-      <string>P1</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -79,9 +100,6 @@
        <height>16777215</height>
       </size>
      </property>
-     <property name="styleSheet">
-      <string notr="true">image: url(:/Imagens/playerBlue.png);</string>
-     </property>
      <property name="text">
       <string/>
      </property>
@@ -109,7 +127,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Jogadorxxx</string>
+      <string/>
      </property>
     </widget>
    </item>
@@ -145,7 +163,7 @@
       </font>
      </property>
      <property name="text">
-      <string>X Jogadores</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

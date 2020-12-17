@@ -10,6 +10,7 @@ import sys
 from main import *
 import jogada
 from Interface.FimdeJogo import FimdeJogo
+import bd
 interface.menu.close()
 
 
@@ -97,6 +98,9 @@ def reinicia():
 def finalizaPartida(Vencedor):
     print("Vencedor: "+nomeJogador(Vencedor))
     interface.fimDeJogo.geraVencedor(Vencedor)
+    bd.inserePartida(nomeJogador(Vencedor))
+    interface.historico.addToHistory()
+
     interface.fimDeJogo.pushButtonMenu.clicked.connect(reinicia)
     interface.fimDeJogo.show()
 

@@ -13,7 +13,7 @@ def criarDataBase():
         cursor.execute(sql)
         connection.commit()
 
-        print(cursor.rowcount, "Banco de Dados criado")
+        print(cursor.rowcount+1, "Banco de Dados criado")
         cursor.close()
 
     except Error as e:
@@ -28,12 +28,12 @@ def criarDataBase():
 def criarTabela():
     try:
         connection = mysql.connector.connect(host='localhost', database='Modular', user='root', password='Viniri00')
-        sql = "CREATE TABLE Partida ( n_partida int not null PRIMARY KEY AUTO_INCREMENT, vencedor varchar(30) not null, numeroJogadores int not null, jogador_1 varchar(30) not null, jogador_2 varchar(30) not null, jogador_3 varchar(30), jogador_4 varchar(30))"
+        sql = "CREATE TABLE Partida ( n_partida int not null PRIMARY KEY AUTO_INCREMENT, vencedor varchar(30) not null, numeroJogadores varchar(3) not null, jogador_1 varchar(30) not null, jogador_2 varchar(30) not null, jogador_3 varchar(30), jogador_4 varchar(30), corJogador_1 varchar(10) not null, corJogador_2 varchar(10) not null, corJogador_3 varchar(10), corJogador_4 varchar(10))"
         cursor = connection.cursor()
         cursor.execute(sql)
         connection.commit()
 
-        print(cursor.rowcount, "Tabela Criada")
+        print(cursor.rowcount+1, "Tabela Criada")
         cursor.close()
 
     except Error as e:
@@ -51,11 +51,11 @@ def inserePartida(Vencedor):
         cursor = connection.cursor()
         quant = len(Jogadores)
         if (quant == 2):
-            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, CorJogador_1, CorJogador_2) VALUES (%s,%s,%s,%s,%s,%s)" , (Vencedor , quant , nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]) , corJogador(Jogadores[0]) , corJogador(Jogadores[1])))
+            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, Jogador_3, Jogador_4, CorJogador_1, CorJogador_2, CorJogador_3, CorJogador_4) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" , (Vencedor, str(quant), nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]), "" , "" , corJogador(Jogadores[0]) , corJogador(Jogadores[1]) , "" , ""))
         elif (quant == 3):
-            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, Jogador_3, CorJogador_1, CorJogador_2, CorJogador_3) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)" , (Vencedor, quant, nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]), nomeJogador(Jogadores[2]) , corJogador(Jogadores[0]) , corJogador(Jogadores[1]) , corJogador(Jogadores[2])))
+            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, Jogador_3, Jogador_4, CorJogador_1, CorJogador_2, CorJogador_3, CorJogador_4) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" , (Vencedor, str(quant), nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]), nomeJogador(Jogadores[2]) , "" , corJogador(Jogadores[0]) , corJogador(Jogadores[1]) , corJogador(Jogadores[2]) , ""))
         elif (quant == 4):
-            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, Jogador_3, Jogador_4, CorJogador_1, CorJogador_2, CorJogador_3, CorJogador_4) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" , (Vencedor, quant, nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]), nomeJogador(Jogadores[2]) , nomeJogador(Jogadores[3]) , corJogador(Jogadores[0]) , corJogador(Jogadores[1]) , corJogador(Jogadores[2]) , corJogador(Jogadores[3])))
+            cursor.execute("INSERT INTO Partida (Vencedor, numeroJogadores, Jogador_1, Jogador_2, Jogador_3, Jogador_4, CorJogador_1, CorJogador_2, CorJogador_3, CorJogador_4) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)" , (Vencedor, str(quant), nomeJogador(Jogadores[0]) , nomeJogador(Jogadores[1]), nomeJogador(Jogadores[2]) , nomeJogador(Jogadores[3]) , corJogador(Jogadores[0]) , corJogador(Jogadores[1]) , corJogador(Jogadores[2]) , corJogador(Jogadores[3])))
         
         connection.commit()
 
@@ -101,7 +101,7 @@ def dropPartida():
         cursor = connection.cursor()
         cursor.execute(sql)
 
-        print(cursor.rowcount, "Tabela Apagada")
+        print(cursor.rowcount+1, "Tabela Apagada")
         cursor.close()
 
     except Error as e:

@@ -1,5 +1,3 @@
 from bd import *
 
-
-
-criarDataBase()
+recuperaPartida()

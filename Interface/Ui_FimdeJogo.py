@@ -20,6 +20,16 @@ class Ui_FimdeJogo(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/Imagens/ludo_icon.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         FimdeJogo.setWindowIcon(icon)
+        FimdeJogo.setStyleSheet("QWidget#FimdeJogo {\n"
+"    background-color: rgb(247, 255, 93);\n"
+"    color: rgb(0, 0, 0);\n"
+"    border-width: 4px;\n"
+"    border-style: solid;\n"
+"    border-color: rgb(0,0,0);\n"
+"    border-radius: 4;\n"
+"}\n"
+"\n"
+"")
         self.verticalLayout = QtWidgets.QVBoxLayout(FimdeJogo)
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(20, 5, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
@@ -78,7 +88,8 @@ class Ui_FimdeJogo(object):
         font.setWeight(75)
         self.pushButtonExit.setFont(font)
         self.pushButtonExit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButtonExit.setStyleSheet("color: rgb(0, 0, 0);")
+        self.pushButtonExit.setStyleSheet("color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 37, 40);")
         self.pushButtonExit.setObjectName("pushButtonExit")
         self.horizontalLayout_3.addWidget(self.pushButtonExit)
         self.pushButtonMenu = QtWidgets.QPushButton(self.ConfirmCancelButtons)
@@ -90,7 +101,8 @@ class Ui_FimdeJogo(object):
         font.setWeight(75)
         self.pushButtonMenu.setFont(font)
         self.pushButtonMenu.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButtonMenu.setStyleSheet("color: rgb(0, 0, 0);")
+        self.pushButtonMenu.setStyleSheet("color: rgb(0, 0, 0);\n"
+"background-color: rgb(0, 255, 0);")
         self.pushButtonMenu.setObjectName("pushButtonMenu")
         self.horizontalLayout_3.addWidget(self.pushButtonMenu)
         self.verticalLayout.addWidget(self.ConfirmCancelButtons)

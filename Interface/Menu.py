@@ -5,7 +5,7 @@
 from Interface.Ui_Menu import Ui_Menu
 
 from PyQt5.QtWidgets import QMainWindow, QWidget
-from PyQt5.QtCore import pyqtSignal, pyqtSlot
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt
 
 
 class Menu(QMainWindow,Ui_Menu):

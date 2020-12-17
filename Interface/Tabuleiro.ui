@@ -17,6 +17,13 @@
    <iconset resource="Resources/resources.qrc">
     <normaloff>:/Imagens/ludo_icon.jpg</normaloff>:/Imagens/ludo_icon.jpg</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#Tabuleiro {
+	color: rgb(219, 255, 140);
+}
+
+</string>
+  </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="leftMargin">
     <number>9</number>

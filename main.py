@@ -7,6 +7,7 @@ from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QLabel, QColorDialog, QMainWindow
 from Interface.Menu import Menu
 from Interface.Regras import Regras
+from Interface.Historico import Historico
 from Interface.Tabuleiro import Tabuleiro
 from Interface.FimdeJogo import FimdeJogo
 import sys
@@ -30,12 +31,13 @@ class Interface(QObject):
         super(Interface, self).__init__()
         self.menu = Menu()
         self.regras = Regras()
+        self.historico = Historico()
         self.tabuleiro = Tabuleiro()
         self.fimDeJogo = FimdeJogo()
         self.fimDeJogo.pushButtonExit.clicked.connect(quit)
         self.menu.StartMatchSignal.connect(validaPartida)
         self.menu.pushButtonRules.clicked.connect(abreRegras)
-        #self.menu.pushButtonHistory.clicked.connect(abreHistorico)
+        self.menu.pushButtonHistory.clicked.connect(abreHistorico)
         self.PartidaInvalida.connect(self.menu.invalidMatch)
         self.CriaJogador.connect(jogadorPeca.criaJogador)
         self.menu.show()
@@ -81,7 +83,7 @@ def abreRegras():
 
 
 #Irá abrir a interface com o histórico de partidas com os nomes dos jogadores de cada partida e o vencedor
-"""
+
 @pyqtSlot()
 def abreHistorico():
     try:
@@ -89,7 +91,7 @@ def abreHistorico():
         return 0
     except:
         return 1
-"""
+
 
 app = QApplication(sys.argv)
 interface = Interface()

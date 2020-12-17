@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="Imagens">
+    <file>trashIcon.png</file>
     <file>imageHistory.png</file>
     <file>infoIcon.png</file>
     <file>tokenBlue.png</file>

@@ -1,7 +1,3 @@
-#Autor: Victor Nielsen
-#Tempo: 3 dias
-
-
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'c:\Users\victo\Desktop\PUC\Modular\Projeto\Ludo-Python\Interface\Tabuleiro.ui'
@@ -22,6 +18,11 @@ class Ui_Tabuleiro(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/Imagens/ludo_icon.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Tabuleiro.setWindowIcon(icon)
+        Tabuleiro.setStyleSheet("QWidget#Tabuleiro {\n"
+"    color: rgb(219, 255, 140);\n"
+"}\n"
+"\n"
+"")
         self.horizontalLayout = QtWidgets.QHBoxLayout(Tabuleiro)
         self.horizontalLayout.setContentsMargins(9, 9, 9, 9)
         self.horizontalLayout.setObjectName("horizontalLayout")
