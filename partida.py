@@ -95,7 +95,7 @@ def reinicia():
 
     
 def finalizaPartida(Vencedor):
-    print(nomeJogador(Vencedor))
+    print("Vencedor: "+nomeJogador(Vencedor))
     interface.fimDeJogo.geraVencedor(Vencedor)
     interface.fimDeJogo.pushButtonMenu.clicked.connect(reinicia)
     interface.fimDeJogo.show()
