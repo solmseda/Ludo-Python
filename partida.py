@@ -99,7 +99,6 @@ def finalizaPartida(Vencedor):
     print("Vencedor: "+nomeJogador(Vencedor))
     interface.fimDeJogo.geraVencedor(Vencedor)
     bd.inserePartida(nomeJogador(Vencedor))
-    interface.historico.addToHistory()
 
     interface.fimDeJogo.pushButtonMenu.clicked.connect(reinicia)
     interface.fimDeJogo.show()

@@ -87,6 +87,7 @@ def abreRegras():
 @pyqtSlot()
 def abreHistorico():
     try:
+        interface.historico.fillHistory()
         interface.historico.show()
         return 0
     except:
