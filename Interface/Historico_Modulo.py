@@ -1,3 +1,5 @@
+#Victor 1811545 - 1 hora
+
 from Interface.Ui_Historico_Modulo import Ui_Historico_Modulo
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QWidget, QApplication
@@ -25,6 +27,8 @@ class Historico_Modulo(QWidget,Ui_Historico_Modulo):
             self.winnerImage.setStyleSheet("image: url(:/Imagens/playerBlue.png);")
         elif corVencedor == "Amarelo":
             self.winnerImage.setStyleSheet("image: url(:/Imagens/playerYellow.png);")
+
+        self.numberPlayers.setText(partida[3])
 
 
         

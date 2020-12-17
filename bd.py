@@ -1,3 +1,5 @@
+#Sol - 10 horas
+
 import mysql.connector
 from mysql.connector import Error
 from jogadorPeca import *

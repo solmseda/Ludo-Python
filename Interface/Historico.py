@@ -1,3 +1,6 @@
+#Victor - 5 horas
+
+
 from Interface.Ui_Historico import Ui_Historico
 
 from Interface.Historico_Modulo import Historico_Modulo
@@ -15,7 +18,7 @@ class Historico(QWidget,Ui_Historico):
     def __init__(self):
         super(Historico, self).__init__()
         self.setupUi(self)
-        self.buttonTrash.clicked.connect(self.clearHistory)
+        #self.buttonTrash.clicked.connect(self.clearHistory)
 
 
     def fillHistory(self):
@@ -28,13 +31,10 @@ class Historico(QWidget,Ui_Historico):
 
 
     def clearHistory(self):
-        if self.scrollArea is not None:
-            while self.scrollArea.count():
-                item = self.scrollArea.takeAt(0)
-                widget = item.widget()
-                if widget is not None:
-                    widget.deleteLater()
-                else:
-                    self.clearLayout(item.layout())
-        bd.dropPartida()
+        for i in reversed(range(self.verticalLayoutScrollArea.count())): 
+            widgetToRemove = self.verticalLayoutScrollArea.itemAt(i).widget()
+
+            if type(widgetToRemove) == Historico_Modulo:
+                self.verticalLayoutScrollArea.removeWidget(widgetToRemove)
+                widgetToRemove.setParent(None)
         return

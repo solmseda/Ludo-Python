@@ -67,7 +67,7 @@ def escolheBase(Jogador):
         elif Jogador[1] == "Azul":
             Jogador.append([85,86,87,88])
         elif Jogador[1] == "Amarelo":
-            Jogador.append([72,73,74,75])
+            Jogador.append([89,90,91,92])
         if len(Jogador) == 3:
             return 0
         else:

@@ -1,3 +1,4 @@
 from bd import *
 
-dropPartida()
+criarTabela()
+inserePartida("Joao", "Vermelho")

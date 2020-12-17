@@ -63,7 +63,7 @@ class Ui_Historico_Modulo(object):
         self.numberPlayers = QtWidgets.QLabel(Historico_Modulo)
         self.numberPlayers.setMinimumSize(QtCore.QSize(100, 0))
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setPointSize(18)
         font.setBold(False)
         font.setWeight(50)
         self.numberPlayers.setFont(font)

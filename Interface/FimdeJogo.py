@@ -1,3 +1,5 @@
+#Victor - 1 hora
+
 from Interface.Ui_FimdeJogo import Ui_FimdeJogo
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QWidget, QApplication
