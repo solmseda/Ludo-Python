@@ -6,7 +6,7 @@
 
 Jogo de Ludo, com interface gráfica, implementado em Python.
 
-[Metodo de Implementação]()
+* [Metodo de Implementação](ludo_regras.pdf)
 
 ---
 
